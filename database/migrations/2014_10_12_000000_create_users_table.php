@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Str;
 
 return new class extends Migration
 {
@@ -16,7 +17,10 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
+            $table->date('birthday'); //他にいいのあるか調べる
             $table->string('password');
+            $table->string('original_id')->default(Str::random(8));
+            $table->string('personality_id');
             $table->rememberToken();
             $table->timestamps();
         });
