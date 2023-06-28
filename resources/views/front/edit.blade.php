@@ -20,12 +20,12 @@
 
         <!-- クリックした文章のid -->
         <div>
-            <x-text-input id="sentence_id	" class="block mt-1 w-full" type="hidden" name="sentence_id	" value="関数" />
+            <x-text-input id="sentence_id" class="block mt-1 w-full" type="hidden" name="sentence_id" value="関数" />
         </div>
 
         <!-- 書き込みしているユーザーのid -->
         <div>
-            <x-text-input id="edit_user_id	" class="block mt-1 w-full" type="hidden" name="edit_user_id	" value="関数" />
+            <x-text-input id="edit_user_id" class="block mt-1 w-full" type="hidden" name="edit_user_id" value="関数" />
         </div>
         
         <!-- 更新内容 -->
