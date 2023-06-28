@@ -9,7 +9,7 @@
 </head>
 <body>
 <!-- 条件分岐で表示する件数を制限、編集ボタンを表示しない -->
-    
+   <button onclick="location.href='/edit?id=${sentences.id}'" type="button" class="btn btn-primary">Edit</button>;
 
     <!-- 条件分岐で表示するしない -->
         <!-- フッター（ログイン後固定） -->
