@@ -10,7 +10,7 @@
 <body>
     <!-- クリックした文章のみを表示させる -->
     <p>関数</p>
-    <form method="POST" action="{{ route('register') }}">
+    <form method="POST" action="ここは書き替える！">
         @csrf
 
         <!-- 書き替えるユーザーのid -->
