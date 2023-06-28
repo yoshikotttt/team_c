@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this ->call(PersonalitiesTableSeeder::class);
-
+        $this ->call(SentencesTableSeeder::class);
 
     }
 }
