@@ -1,5 +1,11 @@
 import { getAll, remove } from "./api.js";
 
+getAll("users").then((users) => {
+    let output = "";
+    output += `<p>${users.original_id}</p>`;
+    document.querySelector("#original_id").innerHTML = output;
+});
+
 // 中間テーブル personality_user
 getAll("personality_user").then((personality_user) => {
     let output = "";
