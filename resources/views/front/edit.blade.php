@@ -40,6 +40,14 @@
                 {{ '更新' }}
             </x-primary-button>
         </div>
+    </form>
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    @vite('resources/js/app.js')
+
+    <!-- Custom JS -->
+    @vite('resources/js/edit.js')
 
 </body>
 </html>

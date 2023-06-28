@@ -9,6 +9,12 @@
 </head>
 <body>
     <!-- 条件分岐で表示する件数を制限、編集ボタンを表示しない -->
+    <button onclick="location.href='/edit?id=${sentences.id}'" type="button" class="btn btn-primary">Edit</button>
+
+    <div class="container mt-5">
+        <!-- このdivの中に出力される -->
+        <div id="output"></div>
+    </div>
     
 
     <!-- 条件分岐で表示するしない -->
@@ -27,5 +33,12 @@
                 <a href="#page4" class="flex justify-center py-4">設定</a>
             </li>
         </ul>
+     <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    @vite('resources/js/app.js')
+
+    <!-- Custom JS -->
+    @vite('resources/js/timeline.js')
 </body>
 </html>

@@ -9,20 +9,27 @@
 </head>
 <body>
     <div class="container mt-5">
-        <table class="table" id="mypageTable">
-            <thead>
-                <tr>
-                    <th>
-                        <h2>「関数」さんはこんなひと</h2>
-                    </th>
-                    <th>
-                        <p>(合ってる？合ってない？編集しちゃえ！)</p>
-                    </th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-        <a href="/create" class="btn btn-dark">create</a>
+        <div>
+            <div>
+                <h2>「関数」さんはこんなひと</h2>
+                <p>(合ってる？合ってない？編集しちゃえ！)</p>
+            </div>
+            <!-- このdivの中に性格タイプが出力される -->
+            <div id="type"></div>
+            <!-- このdivの中に説明文が出力される -->
+            <div id="output"></div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div>
+            <div>
+                <h2>つまり、「関数」さんはこんなひと</h2>
+                <p>(みんなからはこう見えてるよ！)</p>
+            </div>
+            <!-- このdivの中に出力される -->
+            <div id="output2"></div>
+        </div>
     </div>
 
     
