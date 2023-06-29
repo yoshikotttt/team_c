@@ -33,12 +33,42 @@ Route::middleware('auth')->group(function () {
 });
 
 /// 新しく作ったルート 
+//after login route
 Route::middleware('auth')->group(function () {
+    //timeline(after login)
     Route::get('/front/timeline',function(){
         return view('front.timeline');
     });
+    //detail(after login)
+    Route::get('/front/detail',function(){
+        return view('front.detail');
+    });
+    //logout
+    Route::get('/logout',function(){
+        return view('front.logout');
+    });
+
+    //secret
+    Route::get('/secret',function(){
+        return view('front.secret');
+    });
+
+    //edit
+    Route::get('/edit',function(){
+        return view('front.edit');
+    });
 });
 
+//before login route
+//timeline(before login)
+Route::get('/front/timeline',function(){
+    return view('front.timeline');
+});
+
+//detail(before login)
+Route::get('/front/detail',function(){
+    return view('front.detail');
+});
 
 
 
