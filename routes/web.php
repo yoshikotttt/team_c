@@ -49,7 +49,7 @@ Route::middleware('auth')->group(function () {
     });
 
     //logout
-    Route::get('/mypage',function(){
+    Route::get('front/mypage',function(){
         return view('front.mypage');
     });
 

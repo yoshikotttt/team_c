@@ -35,7 +35,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::apiResource('/front/timeline', RegisteredUserController::class);
 Route::apiResource('/mypage', EditSentenceController::class);
 Route::get('users', [UserController::class, 'index']); //追加
-Route::get('users', [UserController::class, 'show']); //追加
+Route::get('user', [UserController::class, 'show']); //追加
 Route::get('personalities', [PersonalityController::class, 'index']); //追加
 Route::get('personalities', [PersonalityController::class, 'index']); //追加
 
