@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,14 +19,26 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//ダッシュボードへのルートは一旦削除
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('/dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+//元のルート   profileが呼ばれると、(functionて書く代わりに)コントローラーのクラスを書いているだけ
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+/// 新しく作ったルート 
+Route::middleware('auth')->group(function () {
+    Route::get('/timeline', [RegisteredUserController::class, 'index'])->name('timeline');
+});
+
+
+
+
+
 
 require __DIR__.'/auth.php';

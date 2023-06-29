@@ -55,4 +55,12 @@ class RegisteredUserController extends Controller
 
         return redirect(RouteServiceProvider::HOME);
     }
+
+    public function index()
+    {
+        // users テーブルの全データを取得して JSON 形式で返す
+        $users = User::all();
+        return response()->json($users);
+    }
+
 }

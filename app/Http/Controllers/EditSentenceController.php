@@ -5,25 +5,20 @@ namespace App\Http\Controllers;
 use App\Models\EditSentence;
 use Illuminate\Http\Request;
 
+
 class EditSentenceController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        //
-    }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+  public function index()
     {
-        //
+        $sentences = EditSentence::all();
+        return response()->json($sentences);
+     
     }
-
-    /**
+     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
@@ -34,23 +29,21 @@ class EditSentenceController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(EditSentence $editSentence)
+    public function show(string $id)
     {
-        //
-    }
+        $editSentence = EditSentence::with('sentence:id,content')->findOrFail($id);
+        
+        // $sentenceContent = $editSentence->sentence->content; // 関連する Sentence モデルの文章の内容
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(EditSentence $editSentence)
-    {
-        //
+        // $sentenceContent を使って必要な処理を行う
+
+        return response()->json($editSentence);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, EditSentence $editSentence)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -58,8 +51,11 @@ class EditSentenceController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(EditSentence $editSentence)
+    public function destroy(string $id)
     {
         //
     }
+
+
+
 }
