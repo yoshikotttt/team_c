@@ -5,7 +5,7 @@ getAll("users").then((users) => {
     users.forEach((user) => {
         output += `<div>`;
         output += `<h2>${user.name}</h2>`;
-        output += `<p>${personality_user.personality}</p>`;
+        output += `<p>${user.personality_id}</p>`;
         // 中間テーブル personality_user
         output += `</div>`;
     });

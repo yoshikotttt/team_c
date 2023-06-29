@@ -58,9 +58,13 @@ class RegisteredUserController extends Controller
 
     public function index()
     {
+       
         // users テーブルの全データを取得して JSON 形式で返す
         $users = User::all();
-        return response()->json($users);
+        // var_dump($users);
+        return;
+        // return response()->json($users);  あとでここだけ戻す
+        // exit();
     }
 
 }

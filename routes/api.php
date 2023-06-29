@@ -33,5 +33,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // Route::get('/sentence', [PersonalityController::class, 'index']);
 // Route::get('/sentence/{id}', [PersonalityController::class, 'show']);
 
-Route::apiResource('/timeline', RegisteredUserController::class);
+Route::apiResource('/front/timeline', RegisteredUserController::class);
 Route::apiResource('/mypage', EditSentenceController::class);
