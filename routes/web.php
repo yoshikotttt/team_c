@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,7 +34,7 @@ Route::middleware('auth')->group(function () {
 
 /// 新しく作ったルート 
 Route::middleware('auth')->group(function () {
-    Route::get('/timeline', [RegisteredUserController::class, 'index'])->name('timeline');
+    Route::get('/front/timeline', [RegisteredUserController::class, 'index'])->name('/front/timeline');
 });
 
 

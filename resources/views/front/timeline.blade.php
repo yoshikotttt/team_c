@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
+{{-- <nav x-data="{ open: false }" class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -97,7 +97,7 @@
             </div>
         </div>
     </div>
-</nav>
+</nav> --}}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -109,7 +109,7 @@
     <title>Document</title>
 </head>
 <body>
-
+     ああああああ
     <!-- 条件分岐で表示する件数を制限、編集ボタンを表示しない -->
     <button onclick="location.href='/edit?id=${sentences.id}'" type="button" class="btn btn-primary">Edit</button>
 
