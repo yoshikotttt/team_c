@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\UserController; //追加
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EditSentenceController;
@@ -35,3 +36,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource('/front/timeline', RegisteredUserController::class);
 Route::apiResource('/mypage', EditSentenceController::class);
+Route::get('users', [UserController::class, 'index']); //追加
