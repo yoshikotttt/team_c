@@ -13,7 +13,8 @@ class PersonalityController extends Controller
      */
     public function index()
     {
-        //
+        $personalities = Personality::all();
+        return response()->json($personalities);
     }
 
     /**
@@ -27,9 +28,10 @@ class PersonalityController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $id) //$idはパスパラメータ
     {
-        //
+        $personalities = Personality::where('id',$id)->get();
+        return response()->json($personalities);
     }
 
     /**
