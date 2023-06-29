@@ -34,7 +34,9 @@ Route::middleware('auth')->group(function () {
 
 /// 新しく作ったルート 
 Route::middleware('auth')->group(function () {
-    Route::get('/front/timeline', [RegisteredUserController::class, 'index'])->name('/front/timeline');
+    Route::get('/front/timeline',function(){
+        return view('front.timeline');
+    });
 });
 
 
