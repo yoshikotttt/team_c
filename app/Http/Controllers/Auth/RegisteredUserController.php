@@ -62,8 +62,8 @@ class RegisteredUserController extends Controller
         // users テーブルの全データを取得して JSON 形式で返す
         $users = User::all();
         // var_dump($users);
-        return;
-        // return response()->json($users);  あとでここだけ戻す
+     
+        return response()->json($users);  
         // exit();
     }
 
