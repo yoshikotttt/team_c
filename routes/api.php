@@ -27,9 +27,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return 'welcome';
 // });
 
-// Route::get('/aaa', function () {
-//     return 'しんじさんありがとう';
-// });
+
 
 // Route::get('/sentence', [PersonalityController::class, 'index']);
 // Route::get('/sentence/{id}', [PersonalityController::class, 'show']);
@@ -37,3 +35,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::apiResource('/front/timeline', RegisteredUserController::class);
 Route::apiResource('/mypage', EditSentenceController::class);
 Route::get('users', [UserController::class, 'index']); //追加
+Route::get('users', [UserController::class, 'show']); //追加
+Route::get('personalities', [PersonalityController::class, 'index']); //追加
+Route::get('personalities', [PersonalityController::class, 'index']); //追加
+
+
+
+// Route::apiResource('personalities', PersonalityController::class);
