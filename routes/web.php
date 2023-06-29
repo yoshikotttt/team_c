@@ -48,6 +48,11 @@ Route::middleware('auth')->group(function () {
         return view('front.logout');
     });
 
+    //logout
+    Route::get('/mypage',function(){
+        return view('front.mypage');
+    });
+
     //secret
     Route::get('/secret',function(){
         return view('front.secret');
