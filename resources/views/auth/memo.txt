@@ -1,0 +1,41 @@
+<!-- original_id -->
+        <div>
+            <!-- forでキーを設定。valueはラベルとして表示される-->
+            <x-input-label for="birthday" :value="'オリジナルid（隠す予定）'" />
+            <!-- 実際にユーザーが入力した文字。idでキーを照合。old（birthday）は前回の入力履歴を表示させるため-->
+            <x-text-input id="original_id" class="block mt-1 w-full" type="text" name="original_id" :value="''.Str::random(8)" required autofocus autocomplete="original_id" readonly />
+
+            <!-- 入力忘れ時等のエラー -->
+            <x-input-error :messages="$errors->get('original_id')" class="mt-2" />
+        </div>
+
+
+
+
+
+<!-- timeline.jsの確認用 -->
+        getAll("personalities").then((personalities) => {
+   console.log(personalities);
+});
+
+
+ getAll("sentences").then((sentences) => {
+    console.log(sentences);
+ });
+
+
+
+
+
+
+ <!-- api.phpの確認用 -->
+ // Route::post ?? 送られてくるデータのルートが必要だけどedit Sentenceのコントローラでいいのかな
+
+
+
+// 以下のものはapiResourceでまとめられるらしい  post、deleteの参考用
+// Route::get('/profiles', [ProfileController::class, 'index']);
+// Route::get('/profiles/{id}', [ProfileController::class, 'show']);
+// Route::post('/profiles', [ProfileController::class, 'store']);
+// Route::put('/profiles/{id}', [ProfileController::class, 'update']);
+// Route::delete('/profiles/{id}', [ProfileController::class, 'destroy']);

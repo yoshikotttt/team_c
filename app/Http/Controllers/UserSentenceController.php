@@ -12,9 +12,11 @@ class UserSentenceController extends Controller
      */
     public function index()
     {
-        //
-    }
+        
+        $user_sentences = UserSentence::all();
+        return response()->json($user_sentences);  
 
+    }
     /**
      * Store a newly created resource in storage.
      */

@@ -14,8 +14,8 @@ class EditSentenceController extends Controller
 
   public function index()
     {
-        $sentences = EditSentence::all();
-        return response()->json($sentences);
+        $editSentences = EditSentence::all();
+        return response()->json($editSentences);
      
     }
      /**

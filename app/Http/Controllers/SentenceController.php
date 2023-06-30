@@ -12,7 +12,10 @@ class SentenceController extends Controller
      */
     public function index()
     {
-        //
+        
+        $sentences = Sentence::all();
+        return response()->json($sentences);  
+
     }
 
     /**
