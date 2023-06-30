@@ -8,8 +8,11 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- 条件分岐で表示する件数を制限、編集ボタンを表示しない -->
-   <button onclick="location.href='/edit?id=${sentences.id}'" type="button" class="btn btn-primary">Edit</button>
+    <!-- 直接編集画面へ行く
+    <button onclick="location.href='/edit?id=${sentences.id}'" type="button" class="btn btn-primary">Edit</button> -->
+
+    <!-- 秘密の質問へリンク -->
+    <button onclick="location.href='/secret'" type="button" class="btn btn-primary">Edit</button>
 
    <div class="container mt-5">
         <div>

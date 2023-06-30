@@ -9,12 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- 直接編集画面へ行く
-    <button onclick="location.href='/edit?id=${sentences.id}'" type="button" class="btn btn-primary">Edit</button> -->
-
-    <!-- 秘密の質問へリンク -->
-    <button onclick="location.href='/question'" type="button" class="btn btn-primary">Edit</button>
-
+    
     <div class="container mt-5">
         <!-- このdivの中に出力される -->
         <div id="output"></div>
