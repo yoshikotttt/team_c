@@ -49,17 +49,17 @@ Route::middleware('auth')->group(function () {
     });
 
     //logout
-    Route::get('front/mypage',function(){
+    Route::get('/front/mypage',function(){
         return view('front.mypage');
     });
 
     //secret
-    Route::get('/secret',function(){
+    Route::get('/front/secret',function(){
         return view('front.secret');
     });
 
     //edit
-    Route::get('/edit',function(){
+    Route::get('/front/edit',function(){
         return view('front.edit');
     });
 });
