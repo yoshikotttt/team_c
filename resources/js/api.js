@@ -29,6 +29,14 @@ export function update(endpoint, id, data) {
         .catch(handleError);
 }
 
+//質問の回答の正誤判断のために追加
+export function search(endpoint, params) {
+    return axios
+        .get(`/api/${endpoint}`, { params })
+        .then((response) => response.data)
+        .catch(handleError);
+}
+
 export function remove(endpoint, id) {
     return axios
         .delete(`/api/${endpoint}/${id}`)
