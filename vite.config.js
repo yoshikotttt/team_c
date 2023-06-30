@@ -12,6 +12,7 @@ export default defineConfig({
                 "resources/js/edit.js",
                 "resources/js/mypage.js",
                 "resources/js/timeline.js",
+                "resources/js/secret.js",
             ],
             refresh: true,
         }),
