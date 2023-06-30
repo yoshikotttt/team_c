@@ -13,7 +13,7 @@ getAll("personality_user").then((personality_user) => {
     document.querySelector("#type").innerHTML = output;
 });
 
-getAll("editSentences").then((editSentences) => {
+getAll("sentences").then((sentences) => {
     let output = "";
     sentences.forEach((sentence) => {
         output += `<div>`;

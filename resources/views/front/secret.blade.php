@@ -8,9 +8,9 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- クリックした文章のみを表示させる -->
-    <p>関数</p>
-    <form id="editForm">
+    <!-- クリックしたユーザーの情報を取ってくる -->
+    <p>問題！</p>
+    <form id="userForm">
         @csrf
 
         <!-- 書き替えるユーザーのid -->
@@ -18,26 +18,16 @@
             <x-text-input id="user_id" class="block mt-1 w-full" type="hidden" name="user_id" value="関数" />
         </div>
 
-        <!-- クリックした文章のid -->
-        <div>
-            <x-text-input id="sentence_id" class="block mt-1 w-full" type="hidden" name="sentence_id" value="関数" />
-        </div>
-
-        <!-- 書き込みしているユーザーのid -->
-        <div>
-            <x-text-input id="edit_user_id" class="block mt-1 w-full" type="hidden" name="edit_user_id" value="関数" />
-        </div>
-        
-        <!-- 更新内容 -->
+        <!-- 質問 -->
         <div class="mt-4">
-            <x-input-label for="content" :value="'変更内容を記入してください。'" />
-            <x-text-input id="content" class="block mt-1 w-full" type="text" name="content" :value="old('content')" required autocomplete="username" />
-            <x-input-error :messages="$errors->get('content')" class="mt-2" />
+            <x-input-label for="content" :value="'関数（ユーザー名）さんの誕生日は？'" />
+            <x-text-input id="content" class="block mt-1 w-full" type="date" name="birthday" :value="old('birhday')" required autocomplete="birhday" />
+            <x-input-error :messages="$errors->get('birhday')" class="mt-2" />
         </div>
         
         <div class="flex items-center justify-end mt-4">
             <x-primary-button class="ml-4">
-                {{ '更新' }}
+                {{ '回答' }}
             </x-primary-button>
         </div>
     </form>
@@ -47,7 +37,7 @@
     @vite('resources/js/app.js')
 
     <!-- Custom JS -->
-    @vite('resources/js/edit.js')
+    @vite('resources/js/question.js')
 
 </body>
 </html>
