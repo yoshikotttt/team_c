@@ -37,7 +37,7 @@
     @vite('resources/js/app.js')
 
     <!-- Custom JS -->
-    @vite('resources/js/question.js')
+    @vite('resources/js/secret.js')
 
 </body>
 </html>
