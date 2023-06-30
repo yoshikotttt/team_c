@@ -6,7 +6,16 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EditSentenceController;
 use App\Http\Controllers\PersonalityController;
+use App\Http\Controllers\freeCommentController;
+use App\Http\Controllers\SentenceController;
+use App\Http\Controllers\UserSentenceController;
 use App\Models\EditSentence;
+use App\Models\Sentence;
+use App\Models\Personality;
+use App\Models\freeComment;
+use App\Models\UserSentence;
+use App\Models\User;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -32,12 +41,15 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // Route::get('/sentence', [PersonalityController::class, 'index']);
 // Route::get('/sentence/{id}', [PersonalityController::class, 'show']);
 
-Route::apiResource('/front/timeline', RegisteredUserController::class);
-Route::apiResource('/mypage', EditSentenceController::class);
-Route::get('users', [UserController::class, 'index']); //追加
-Route::get('user', [UserController::class, 'show']); //追加
-Route::get('personalities', [PersonalityController::class, 'index']); //追加
-Route::get('personalities', [PersonalityController::class, 'index']); //追加
+// Route::apiResource('/front/timeline', RegisteredUserController::class);
+// Route::apiResource('/mypage', EditSentenceController::class);
+Route::get('users', [UserController::class, 'index']); 
+Route::get('personalities', [PersonalityController::class, 'index']); 
+Route::get('user_sentences', [UserSentenceController::class, 'index']); 
+Route::get('editSentences', [EditSentenceController::class, 'index']); 
+Route::get('sentences', [SentenceController::class, 'index']); 
+Route::get('sentences', [SentenceController::class, 'index']); 
+
 
 
 
