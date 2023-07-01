@@ -1,8 +1,8 @@
 import { getAll, remove ,getOne} from "./api.js";
 
-// const params = new URLSearchParams(window.location.search);
-// const id = params.get('id');
-const id = 1;
+const params = new URLSearchParams(window.location.search);
+const id = params.get('id');
+// const id = 1;
 
 getOne('users', id).then(user => {
     console.log(user);
@@ -23,6 +23,7 @@ getAll("personality_user").then((personality_user) => {
     output += `</div >`;
     document.querySelector("#type").innerHTML = output;
 });
+
 
 getAll("sentences").then((sentences) => {
     let output = "";
