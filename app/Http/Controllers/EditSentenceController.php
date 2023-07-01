@@ -18,13 +18,7 @@ class EditSentenceController extends Controller
         return response()->json($editSentences);
      
     }
-     /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+   
 
     /**
      * Display the specified resource.
@@ -57,5 +51,35 @@ class EditSentenceController extends Controller
     }
 
 
+
+    public function store(Request $request)
+    {
+        //[重要] バリデーション後で確認する
+
+        $request->validate([
+            'user_id' => ['required', 'integer'], 
+            'sentence_id' => ['required', 'integer'], 
+            'edit_user_id' => ['required', 'integer'], 
+            'content' => ['required', 'string', 'max:300'], 
+        ]);
+
+        // $newSentence = EditSentence::create([
+ 
+        //     'user_id' => $request->user_id,  
+        //     'sentence_id' => $request->sentence_id,   
+        //     'edit_user_id' => $request->edit_user_id,
+        //     'content' => $request->content,
+        // ]);
+
+        $newSentence = EditSentence::create([
+            'user_id' => $request->input('user_id'),  
+            'sentence_id' => $request->input('sentence_id'),   
+            'edit_user_id' => $request->input('edit_user_id'),
+            'content' => $request->input('content'),
+        ]);
+    
+        // レスポンスとして作成された文章を返す
+        return response()->json($newSentence);
+    }
 
 }
