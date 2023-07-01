@@ -1,50 +1,62 @@
-import { getAll, remove ,getOne} from "./api.js";
+import { getAll, remove, getOne } from "./api.js";
 
-const params = new URLSearchParams(window.location.search);
-const id = params.get('id');
+// const params = new URLSearchParams(window.location.search);
+// const id = params.get('id');
 // const id = 1;
 
-getOne('users', id).then(user => {
-    console.log(user);
-});
+const element = document.getElementById("type");
+const personalityId = element.dataset.personalityId;
+// console.log(personalityId);
 
+getAll("personalities").then((personalities) => {
+    console.log(personalityId);
+    // console.log(personalities);
+    let output = ""; // output変数を外側に定義
 
-getAll("users").then((users) => {
-    let output = "";
-    output += `<p>${users.original_id}</p>`;
-    document.querySelector("#original_id").innerHTML = output;
-});
+    personalities.forEach((item) => {
+        console.log(item.id);
+        if (personalityId == item.id) {
+            // 比較演算子を修正
+            // 条件に一致した場合の処理を追加
+            output += `<div>`;
+            output += `<h2>${item.name}</h2>`;
+            output += `</div >`;
+        }
 
-// 中間テーブル personality_user
-getAll("personality_user").then((personality_user) => {
-    let output = "";
-    output += `<div>`;
-    output += `<h2>${personality_user.personality}</h2>`;
-    output += `</div >`;
-    document.querySelector("#type").innerHTML = output;
-});
-
-
-getAll("sentences").then((sentences) => {
-    let output = "";
-    sentences.forEach((sentence) => {
-        output += `<div>`;
-        output += `<div id="${sentence.id}">`;
-        output += `<p>${sentence.content}</p>`;
-        output += `</div >`;
-        output += `</div>`;
+        // output変数の内容をHTMLに挿入
+        document.querySelector("#personality").innerHTML = output;
     });
-    document.querySelector("#output").innerHTML = output;
+
+    getAll("sentences").then((sentences) => {
+        let output1 = ""; // output変数を外側に定義
+
+        sentences.forEach((item) => {
+            console.log(item.personalities_id);
+
+            if (personalityId == item.personalities_id) {
+                // 比較演算子を修正
+
+                // 条件に一致した場合の処理を追加
+                output1 += `<div>`;
+                output1 += `<div id="${item.id}">`;
+                output1 += `<p>${item.content}</p>`;
+                output1 += `</div >`;
+                output1 += `</div>`;
+            }
+        });
+        // output変数の内容をHTMLに挿入
+        document.querySelector("#output").innerHTML = output1;
+    });
 });
 
-getAll("editSentences").then((editSentences) => {
-    let output = "";
-    editSentences.forEach((editSentence) => {
-        output += `<div>`;
-        output += `<div id="${editSentence.id}">`;
-        output += `<p>${editSentence.content}</p>`;
-        output += `</div>`;
-        output += `</div>`;
-    });
-    document.querySelector("#output2").innerHTML = output;
-});
+// getAll("editSentences").then((editSentences) => {
+//     let output = "";
+//     editSentences.forEach((editSentence) => {
+//         output += `<div>`;
+//         output += `<div id="${editSentence.id}">`;
+//         output += `<p>${editSentence.content}</p>`;
+//         output += `</div>`;
+//         output += `</div>`;
+//     });
+//     document.querySelector("#output2").innerHTML = output;
+// });
