@@ -15,17 +15,17 @@
 
         <!-- 書き替えるユーザーのid -->
         <div>
-            <x-text-input id="user_id" class="block mt-1 w-full" type="hidden" name="user_id" value="関数" />
+            <x-text-input id="user_id" class="block mt-1 w-full" type="hidden" name="user_id" value="$user_id" />
         </div>
 
         <!-- クリックした文章のid -->
         <div>
-            <x-text-input id="sentence_id" class="block mt-1 w-full" type="hidden" name="sentence_id" value="関数" />
+            <x-text-input id="sentence_id" class="block mt-1 w-full" type="hidden" name="sentence_id" value="$sentence_id" />
         </div>
 
         <!-- 書き込みしているユーザーのid -->
         <div>
-            <x-text-input id="edit_user_id" class="block mt-1 w-full" type="hidden" name="edit_user_id" value="関数" />
+            <x-text-input id="edit_user_id" class="block mt-1 w-full" type="hidden" name="edit_user_id" value="$edit_user_id" />
         </div>
         
         <!-- 更新内容 -->
@@ -36,9 +36,10 @@
         </div>
         
         <div class="flex items-center justify-end mt-4">
-            <x-primary-button class="ml-4">
+            {{-- <x-primary-button class="ml-4">
                 {{ '更新' }}
-            </x-primary-button>
+            </x-primary-button> --}}
+            <button type="submit" class="btn btn-primary">更新</button>
         </div>
     </form>
     <!-- JS, Popper.js, and jQuery -->
