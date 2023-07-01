@@ -16,6 +16,10 @@
 
    <div class="container mt-5">
         <div>
+            <div>
+                <h2 id="name"></h2>
+                <p id="type"></p>
+            </div>
             <div id="name1">
                 {{-- <!-- これでconstで指定した関数呼び出せる？ -->
                 <h2>${username}さんはこんなひと</h2> --}}
