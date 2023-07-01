@@ -1,4 +1,13 @@
-import { getAll, remove } from "./api.js";
+import { getAll, remove ,getOne} from "./api.js";
+
+// const params = new URLSearchParams(window.location.search);
+// const id = params.get('id');
+const id = 1;
+
+getOne('users', id).then(user => {
+    console.log(user);
+});
+
 
 getAll("users").then((users) => {
     let output = "";
