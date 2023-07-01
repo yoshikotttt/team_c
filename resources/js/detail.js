@@ -9,6 +9,10 @@ const id = params.get("id");
 
 getOne("users", id).then((user) => {
     console.log(user);
+    let output = "";
+    output += `${user.name}さん`;
+    document.querySelector("#name").innerHTML = output;
+
     let output1 = "";
     output1 += `<h2>${user.name}さんはこんな人</h2>`;
     document.querySelector("#name1").innerHTML = output1;
@@ -16,15 +20,35 @@ getOne("users", id).then((user) => {
     let output2 = "";
     output2 += `<h2>つまり、${user.name}さんはこんな人</h2>`;
     document.querySelector("#name2").innerHTML = output2;
+
+    const personality_id = user.personality_id;
+
+    getAll("personalities").then((personalities) => {
+        console.log(personality_id);
+        // console.log(personalities);
+        let output = ""; // output変数を外側に定義
+
+        personalities.forEach((item) => {
+            console.log(item.id);
+            if (user.personality_id == item.id) {
+                // 比較演算子を修正
+                // 条件に一致した場合の処理を追加
+                output += `${item.name}`;
+            }
+
+            // output変数の内容をHTMLに挿入
+            document.querySelector("#type").innerHTML = output;
+        });
+    });
 });
 
-// 中間テーブル personality_user
+// personality
 // getAll("personality_user").then((personality_user) => {
 //     let output = "";
-//     output += `<div>`;
-//     output += `<h2>${personality_user.personality}</h2>`;
-//     output += `</div >`;
-//     document.querySelector("#type").innerHTML = output;
+// output += `<div>`;
+// output += `<h2>${personality_user.personality}</h2>`;
+// output += `</div >`;
+// document.querySelector("#type").innerHTML = output;
 // });
 
 getAll("sentences").then((sentences) => {
