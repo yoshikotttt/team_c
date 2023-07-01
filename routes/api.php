@@ -49,6 +49,7 @@ Route::get('user_sentences', [UserSentenceController::class, 'index']);
 Route::get('editSentences', [EditSentenceController::class, 'index']); 
 Route::get('sentences', [SentenceController::class, 'index']); 
 Route::get('/users/{id}', [userController::class, 'show']);
+Route::post('edit', [EditSentenceController::class, 'store']);
 
 
 
