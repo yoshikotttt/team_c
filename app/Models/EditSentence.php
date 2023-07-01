@@ -19,4 +19,12 @@ class EditSentence extends Model
     {
         return $this->belongsTo(Sentence::class);
     }
+
+    protected $fillable = [
+        'user_id',
+        'sentence_id',
+        'edit_user_id',
+        'content',
+    ];
+
 }
