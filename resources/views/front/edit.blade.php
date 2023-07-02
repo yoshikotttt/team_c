@@ -8,30 +8,37 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- 編集画面へもどる -->
+    <div id="backbtn"></div>
     <!-- クリックした文章のみを表示させる -->
-    <p>関数</p>
+    <p id="username"></p>
     <form id="editForm">
         @csrf
 
         <!-- 書き替えるユーザーのid -->
-        <div>
-            <x-text-input id="user_id" class="block mt-1 w-full" type="hidden" name="user_id" value="$user_id" />
+        <div id="userId">
+            <!-- <x-text-input id="user_id" class="block mt-1 w-full" type="hidden" name="user_id" value="$user_id" /> -->
         </div>
 
         <!-- クリックした文章のid -->
-        <div>
-            <x-text-input id="sentence_id" class="block mt-1 w-full" type="hidden" name="sentence_id" value="$sentence_id" />
+        <div id="sentenceId">
+            <!-- <x-text-input id="sentence_id" class="block mt-1 w-full" type="hidden" name="sentence_id" value="$sentence_id" /> -->
         </div>
 
         <!-- 書き込みしているユーザーのid -->
         <div>
-            <x-text-input id="edit_user_id" class="block mt-1 w-full" type="hidden" name="edit_user_id" value="$edit_user_id" />
+            <x-text-input id="edit_user_id" class="block mt-1 w-full" type="hidden" name="edit_user_id" value="{{ Auth::user()->id }}" />
         </div>
         
+        <!-- 選択した文章 -->
+        <div id="select"class="mt-4">
+            <!-- <x-input-label for="content" :value="'{{$sentences->sentences}}'" /> -->
+        </div>
+
         <!-- 更新内容 -->
         <div class="mt-4">
             <x-input-label for="content" :value="'変更内容を記入してください。'" />
-            <x-text-input id="content" class="block mt-1 w-full" type="text" name="content" :value="old('content')" required autocomplete="username" />
+            <x-text-input id="content" class="block mt-1 w-full" type="text" name="content" :value="old('content')" required autocomplete="content" />
             <x-input-error :messages="$errors->get('content')" class="mt-2" />
         </div>
         

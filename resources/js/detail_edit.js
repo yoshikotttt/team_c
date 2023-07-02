@@ -7,6 +7,12 @@ const id = params.get("id");
 //     return user;
 // });
 
+let output = "";
+output += `<button onclick="location.href='detail?id=${id}'" type="button" class="btn btn-primary">
+    戻る
+</button>`;
+document.querySelector("#backbtn").innerHTML = output;
+
 getOne("users", id).then((user) => {
     console.log(user);
     let output = "";
@@ -67,7 +73,7 @@ getAll("sentences").then((sentences) => {
                 output += `<div>`;
                 output += `<div id="${item.id}">`;
                 output += `<p>${item.content}</p>`;
-                output += `<button onclick="location.href='edit?id=${user.id}?s=${item.id}'" type="button" class="btn btn-primary">編集</button>`;
+                output += `<button onclick="location.href='edit?id=${user.id}?${item.id}'" type="button" class="btn btn-primary">編集</button>`;
                 output += `</div >`;
                 output += `</div>`;
             }
