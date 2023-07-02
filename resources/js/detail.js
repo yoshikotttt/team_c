@@ -21,6 +21,10 @@ getOne("users", id).then((user) => {
     output2 += `<h2>つまり、${user.name}さんはこんな人</h2>`;
     document.querySelector("#name2").innerHTML = output2;
 
+    let output3 = "";
+    output3 += `<button onclick="location.href='detail_edit?id=${user.id}'" type="button" class="btn btn-primary">Edit</button>`;
+    document.querySelector("#editbtn").innerHTML = output3;
+
     const personality_id = user.personality_id;
 
     getAll("personalities").then((personalities) => {

@@ -9,7 +9,9 @@
 </head>
 <body>
     {{-- 直接編集画面へ行く --}}
-    <button onclick="location.href='detail_edit'" type="button" class="btn btn-primary">Edit</button>
+    <!-- <button onclick="location.href='detail_edit'" type="button" class="btn btn-primary">Edit</button> -->
+    <!-- 実験 -->
+    <div id="editbtn"></div>
 
     <!-- 秘密の質問へリンク -->
     {{-- <button onclick="location.href='secret'" type="button" class="btn btn-primary">Edit</button> --}}
