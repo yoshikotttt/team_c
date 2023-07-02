@@ -9,6 +9,7 @@ export default defineConfig({
                 "resources/js/app.js",
                 "resources/js/api.js",
                 "resources/js/detail.js",
+                "resources/js/detail_edit.js",
                 "resources/js/edit.js",
                 "resources/js/mypage.js",
                 "resources/js/timeline.js",
