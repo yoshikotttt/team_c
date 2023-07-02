@@ -68,8 +68,12 @@ Route::middleware('auth')->group(function () {
     });
 
      //edit
-     Route::get('/front/detail_edit',function(){
+    Route::get('/front/detail_edit',function(){
         return view('front.detail_edit');
+    });
+    //setting
+    Route::get('/front/setting',function(){
+        return view('front.setting');
     });
   
 });
@@ -83,7 +87,7 @@ Route::get('/front/timeline',function(){
 //detail(before login)
 Route::get('/front/detail',function(){
     return view('front.detail');
-});
+})->name('setting');
 
 
 
