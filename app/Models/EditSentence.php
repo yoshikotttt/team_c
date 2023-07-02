@@ -27,4 +27,6 @@ class EditSentence extends Model
         'content',
     ];
 
+    protected $table = 'editSentences';
+
 }
