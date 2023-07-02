@@ -23,10 +23,6 @@ getOne("users", id).then((user) => {
     output1 += `<h2>${user.name}さんはこんな人</h2>`;
     document.querySelector("#name1").innerHTML = output1;
 
-    let output2 = "";
-    output2 += `<h2>つまり、${user.name}さんはこんな人</h2>`;
-    document.querySelector("#name2").innerHTML = output2;
-
     const personality_id = user.personality_id;
 
     getAll("personalities").then((personalities) => {

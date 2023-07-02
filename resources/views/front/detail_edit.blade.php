@@ -32,17 +32,6 @@
         </div>
     </div>
 
-   <div class="container mt-5">
-        <div>
-            <div id="name2"></div>  
-            <div>
-                <p>(みんなからはこう見えてるよ！)</p>
-            </div>
-            <!-- このdivの中に出力される -->
-            <div id="output2"></div>
-        </div>
-    </div>
-
     <!-- 条件分岐で表示するしない -->
         <!-- フッター（ログイン後固定） -->
         <ul class="grid grid-flow-col text-center text-gray-500 bg-gray-100 rounded-lg p-1">
