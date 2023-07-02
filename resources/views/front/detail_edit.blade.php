@@ -8,13 +8,11 @@
     <title>Document</title>
 </head>
 <body>
-    {{-- 直接編集画面へ行く --}}
-    <!-- <button onclick="location.href='detail_edit'" type="button" class="btn btn-primary">Edit</button> -->
-    <!-- 実験 -->
-    <div id="editbtn"></div>
+    <!-- 詳細画面へもどる -->
+    <button onclick="location.href='detail'" type="button" class="btn btn-primary">戻る</button>
 
     <!-- 秘密の質問へリンク -->
-    {{-- <button onclick="location.href='secret'" type="button" class="btn btn-primary">Edit</button> --}}
+    <!-- <button onclick="location.href='secret'" type="button" class="btn btn-primary">Edit</button> -->
 
    <div class="container mt-5">
         <div>
@@ -22,10 +20,7 @@
                 <h2 id="name"></h2>
                 <p id="type"></p>
             </div>
-            <div id="name1">
-                {{-- <!-- これでconstで指定した関数呼び出せる？ -->
-                <h2>${username}さんはこんなひと</h2> --}}
-            </div>  
+            <div id="name1"></div>  
             <div>
                 <p>(合ってる？合ってない？編集しちゃえ！)</p>
             </div>
@@ -38,10 +33,7 @@
 
    <div class="container mt-5">
         <div>
-            <div id="name2">
-                {{-- <!-- これでconstで指定した関数呼び出せる？ -->
-                <h2>${username}さんはこんなひと</h2> --}}
-            </div>  
+            <div id="name2"></div>  
             <div>
                 <p>(みんなからはこう見えてるよ！)</p>
             </div>
@@ -69,6 +61,6 @@
     @vite('resources/js/app.js')
 
     <!-- Custom JS -->
-    @vite('resources/js/detail.js')
+    @vite('resources/js/detail_edit.js')
 </body>
 </html>
