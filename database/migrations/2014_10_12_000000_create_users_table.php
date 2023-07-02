@@ -19,7 +19,8 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->date('birthday'); //他にいいのあるか調べる
             $table->string('password');
-            $table->string('original_id')->default(Str::random(8));
+            //unique
+            $table->string('original_id', 8)->unique();
             $table->string('personality_id');
             $table->rememberToken();
             $table->timestamps();
