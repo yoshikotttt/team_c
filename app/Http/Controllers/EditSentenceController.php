@@ -63,22 +63,23 @@ class EditSentenceController extends Controller
             'content' => ['required', 'string', 'max:300'], 
         ]);
 
-        // $newSentence = EditSentence::create([
- 
-        //     'user_id' => $request->user_id,  
-        //     'sentence_id' => $request->sentence_id,   
-        //     'edit_user_id' => $request->edit_user_id,
-        //     'content' => $request->content,
-        // ]);
-
         $newSentence = EditSentence::create([
-            'user_id' => $request->input('user_id'),  
-            'sentence_id' => $request->input('sentence_id'),   
-            'edit_user_id' => $request->input('edit_user_id'),
-            'content' => $request->input('content'),
+ 
+            'user_id' => $request->user_id,  
+            'sentence_id' => $request->sentence_id,   
+            'edit_user_id' => $request->edit_user_id,
+            'content' => $request->content,
         ]);
+
+        // $newSentence = EditSentence::create([
+        //     'user_id' => $request->input('user_id'),  
+        //     'sentence_id' => $request->input('sentence_id'),   
+        //     'edit_user_id' => $request->input('edit_user_id'),
+        //     'content' => $request->input('content'),
+        // ]);
     
         // レスポンスとして作成された文章を返す
+        // dd($newSentence);
         return response()->json($newSentence);
     }
 
