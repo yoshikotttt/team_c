@@ -1,5 +1,20 @@
-import { search } from "./api.js";
+import { getAll, getOne, search } from "./api.js";
 // 条件に合うものを探すためにsearch関数を使用
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+getOne("users", id).then((user) => {
+    console.log(user);
+
+    let output1 = "";
+    output1 += `<x-text-input id="user_id" class="block mt-1 w-full" type="hidden" name="user_id" value=${user.id} />`;
+    document.querySelector("#userId").innerHTML = output1;
+
+    let output2 = "";
+    output2 += `${user.name}さんさんの誕生日は？`;
+    document.querySelector("#question").innerHTML = output2;
+});
 
 function redirectToPage(userExists) {
     if (userExists) {
