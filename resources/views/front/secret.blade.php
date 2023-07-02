@@ -14,13 +14,14 @@
         @csrf
 
         <!-- 書き替えるユーザーのid -->
-        <div>
-            <x-text-input id="user_id" class="block mt-1 w-full" type="hidden" name="user_id" value="関数" />
+        <div id="userId">
+            <!-- <x-text-input id="user_id" class="block mt-1 w-full" type="hidden" name="user_id" value="関数" /> -->
         </div>
 
         <!-- 質問 -->
         <div class="mt-4">
-            <x-input-label for="content" :value="'関数（ユーザー名）さんの誕生日は？'" />
+            <p id="question"></p>
+            <!-- <x-input-label for="content" :value="'関数（ユーザー名）さんの誕生日は？'" /> -->
             <x-text-input id="content" class="block mt-1 w-full" type="date" name="birthday" :value="old('birhday')" required autocomplete="birhday" />
             <x-input-error :messages="$errors->get('birhday')" class="mt-2" />
         </div>
