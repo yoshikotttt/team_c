@@ -22,12 +22,8 @@ getOne("users", id).then((user) => {
     document.querySelector("#name2").innerHTML = output2;
 
     let output3 = "";
-    output3 += `<button onclick="location.href='detail_edit?id=${user.id}'" type="button" class="btn btn-primary">Edit</button>`;
-    document.querySelector("#editbtn").innerHTML = output3;
-
-    let output4 = "";
-    output4 += `<button onclick="location.href='secret?id=${user.id}'" type="button" class="btn btn-primary">Edit</button>`;
-    document.querySelector("#secretbtn").innerHTML = output4;
+    output3 += `<button onclick="location.href='secret?id=${user.id}'" type="button" class="btn btn-primary">Edit</button>`;
+    document.querySelector("#secretbtn").innerHTML = output3;
 
     const personality_id = user.personality_id;
 
