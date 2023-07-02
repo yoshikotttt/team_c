@@ -68,9 +68,8 @@ Route::middleware('auth')->group(function () {
         return view('front.detail_edit');
     });
     //setting
-    //testで記載
-    Route::get('/front/test',function(){
-        return view('front.test');
+    Route::get('/front/setting',function(){
+        return view('front.setting');
     });
   
 });
