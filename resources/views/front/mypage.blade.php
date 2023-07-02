@@ -15,6 +15,7 @@
         <div>
             <h2>{{ Auth::user()->name }}さん</h2>
             <input type="hidden" id="type" data-personality-id="{{ Auth::user()->personality_id }}"></input>
+            <input type="hidden" id="use_id" data-user-id="{{ Auth::user()->id }}"></input>
             <div id="personality"></div>
             <div>
                 <h2>{{ Auth::user()->name }}さんはこんなひと</h2>
