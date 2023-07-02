@@ -8,11 +8,16 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="original_id"></div>
+    <!-- 秘密の質問へリンク -->
+    <button onclick="location.href='secret'" type="button" class="btn btn-primary">Edit</button>
+    <div id="original_id">{{ Auth::user()->original_id }}</div>
     <div class="container mt-5">
         <div>
+            <h2>{{ Auth::user()->name }}さん</h2>
+            <input type="hidden" id="type" data-personality-id="{{ Auth::user()->personality_id }}"></input>
+            <div id="personality"></div>
             <div>
-                <h2>「関数」さんはこんなひと</h2>
+                <h2>{{ Auth::user()->name }}さんはこんなひと</h2>
                 <p>(合ってる？合ってない？編集しちゃえ！)</p>
             </div>
             <!-- このdivの中に性格タイプが出力される -->
@@ -25,7 +30,7 @@
     <div class="container mt-5">
         <div>
             <div>
-                <h2>つまり、「関数」さんはこんなひと</h2>
+                <h2>つまり、{{ Auth::user()->name }}さんはこんなひと</h2>
                 <p>(みんなからはこう見えてるよ！)</p>
             </div>
             <!-- このdivの中に出力される -->
