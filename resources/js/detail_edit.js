@@ -7,6 +7,12 @@ const id = params.get("id");
 //     return user;
 // });
 
+let output = "";
+output += `<button onclick="location.href='detail?id=${id}'" type="button" class="btn btn-primary">
+    戻る
+</button>`;
+document.querySelector("#backbtn").innerHTML = output;
+
 getOne("users", id).then((user) => {
     console.log(user);
     let output = "";

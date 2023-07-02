@@ -9,7 +9,8 @@
 </head>
 <body>
     <!-- 詳細画面へもどる -->
-    <button onclick="location.href='detail'" type="button" class="btn btn-primary">戻る</button>
+    <div id="backbtn"></div>
+    <!-- <button onclick="location.href='detail'" type="button" class="btn btn-primary">戻る</button> -->
 
     <!-- 秘密の質問へリンク -->
     <!-- <button onclick="location.href='secret'" type="button" class="btn btn-primary">Edit</button> -->
