@@ -20,6 +20,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/explanation', function () {
+    return view('explanation');
+})->name('explanation');
+
 //ダッシュボードへのルートは一旦削除
 Route::get('/dashboard', function () {
     return view('/dashboard');
