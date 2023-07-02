@@ -62,6 +62,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/front/edit',function(){
         return view('front.edit');
     });
+
+     //edit
+     Route::get('/front/detail_edit',function(){
+        return view('front.detail_edit');
+    });
+  
 });
 
 //before login route
