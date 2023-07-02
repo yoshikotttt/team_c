@@ -15,6 +15,7 @@
 
     <!-- 秘密の質問へリンク -->
     {{-- <button onclick="location.href='secret'" type="button" class="btn btn-primary">Edit</button> --}}
+    <div id="secretbtn"></div>
 
    <div class="container mt-5">
         <div>
