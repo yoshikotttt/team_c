@@ -80,14 +80,23 @@ getAll("sentences").then((sentences) => {
     });
 });
 
-// getAll("editSentences").then((editSentences) => {
-//     let output = "";
-//     editSentences.forEach((editSentence) => {
-//         output += `<div>`;
-//         output += `<div id="${editSentence.id}">`;
-//         output += `<p>${editSentence.content}</p>`;
-//         output += `</div>`;
-//         output += `</div>`;
-//     });
-//     document.querySelector("#output2").innerHTML = output;
-// });
+getAll("editSentences").then((editSentences) => {
+    let output = ""; // output変数を外側に定義
+
+    editSentences.forEach((item) => {
+        console.log(item.personalities_id);
+
+        if (id == item.user_id) {
+            // 比較演算子を修正
+
+            // 条件に一致した場合の処理を追加
+            output += `<div>`;
+            output += `<div id="${item.id}">`;
+            output += `<p>${item.content}</p>`;
+            output += `</div >`;
+            output += `</div>`;
+        }
+    });
+    // output変数の内容をHTMLに挿入
+    document.querySelector("#output2").innerHTML = output;
+});
