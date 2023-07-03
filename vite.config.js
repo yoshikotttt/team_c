@@ -14,6 +14,7 @@ export default defineConfig({
                 "resources/js/mypage.js",
                 "resources/js/timeline.js",
                 "resources/js/secret.js",
+                "resources/js/search.js",
             ],
             refresh: true,
         }),

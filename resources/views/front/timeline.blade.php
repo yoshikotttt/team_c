@@ -9,6 +9,10 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- 検索 -->
+    <button onclick="location.href='search'" type="button" class="btn btn-primary">
+        検索
+    </button>
     
     <div class="container mt-5">
         <!-- このdivの中に出力される -->
@@ -26,7 +30,7 @@
                 <a href="mypage" class="flex justify-center py-4">mypage</a>
             </li>
             <li>
-                <a href="setting" class="flex justify-center py-4">設定</a>
+                <a href="/profile" class="flex justify-center py-4">設定</a>
             </li>
         </ul>
      <!-- JS, Popper.js, and jQuery -->

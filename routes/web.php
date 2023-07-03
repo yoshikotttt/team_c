@@ -75,6 +75,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/front/setting',function(){
         return view('front.setting');
     });
+    //search
+    Route::get('/front/search',function(){
+        return view('front.search');
+    });
   
 });
 
