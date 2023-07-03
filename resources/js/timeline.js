@@ -4,8 +4,7 @@ getAll("users").then((users) => {
     getAll("personalities").then((personalities) => {
         let output = ""; // output変数を外側に定義
 
-        users.forEach((user) => {
-            const personality_id = user.personality_id;
+        users.reverse().forEach((user) => {
             let userOutput = ""; // ユーザーごとの出力を保持する変数
 
             personalities.forEach((item) => {
