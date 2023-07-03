@@ -59,7 +59,7 @@
                 <a href="mypage" class="flex justify-center py-4">mypage</a>
             </li>
             <li>
-                <a href="#page4" class="flex justify-center py-4">設定</a>
+                <a href="/profile" class="flex justify-center py-4">設定</a>
             </li>
         </ul>
     <!-- JS, Popper.js, and jQuery -->
