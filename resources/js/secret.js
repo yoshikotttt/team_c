@@ -4,10 +4,15 @@ import { getAll, getOne, search } from "./api.js";
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
+let output = "";
+output += `<button onclick="location.href='detail?id=${id}'" type="button" class="btn btn-primary">
+    戻る
+</button>`;
+document.querySelector("#backbtn").innerHTML = output;
+
 getOne("users", id).then((user) => {
     console.log(user);
 
-    
     let output = "";
     output += `${user.name}さんの誕生日は？`;
     document.querySelector("#question").innerHTML = output;
@@ -20,16 +25,16 @@ document
 
         let birthday = document.getElementById("content").value;
         // console.log(user_id)
-        console.log(birthday)
+        console.log(birthday);
         getOne("users", id).then((user) => {
             console.log(user);
             const correct_birthday = user.birthday;
             const correct_user_id = user.id;
-            if(birthday == correct_birthday){
-                window.location.href =`detail_edit?id=${correct_user_id}`;
-            }else{
-                alert('誕生日がちがうよ。');
-                window.location.href =`detail?id=${correct_user_id}`;
+            if (birthday == correct_birthday) {
+                window.location.href = `detail_edit?id=${correct_user_id}`;
+            } else {
+                alert("誕生日がちがうよ。");
+                window.location.href = `detail?id=${correct_user_id}`;
             }
         });
 

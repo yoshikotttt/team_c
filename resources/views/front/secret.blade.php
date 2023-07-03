@@ -8,6 +8,8 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- 詳細画面へもどる -->
+    <div id="backbtn"></div>
     <!-- クリックしたユーザーの情報を取ってくる -->
     <p>問題！</p>
     <form id="userForm">
