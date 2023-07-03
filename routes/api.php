@@ -50,6 +50,7 @@ Route::get('editSentences', [EditSentenceController::class, 'index']);
 Route::get('sentences', [SentenceController::class, 'index']); 
 Route::get('/users/{id}', [userController::class, 'show']);
 Route::post('edit', [EditSentenceController::class, 'store']);
+Route::post('search', [userController::class, 'index']); //追加
 
 
 
