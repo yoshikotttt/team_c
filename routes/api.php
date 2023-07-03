@@ -51,6 +51,8 @@ Route::get('sentences', [SentenceController::class, 'index']);
 Route::get('/users/{id}', [userController::class, 'show']);
 Route::post('edit', [EditSentenceController::class, 'store']);
 Route::post('search', [userController::class, 'index']); //追加
+//sentence getOne
+Route::get('/sentences/{id}', [SentenceController::class, 'show']); 
 
 
 

@@ -31,7 +31,8 @@ class SentenceController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $sentence = Sentence::find($id);
+        return response()->json($sentence);  
     }
 
     /**
