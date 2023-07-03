@@ -9,6 +9,10 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- 検索 -->
+    <button onclick="location.href='search'" type="button" class="btn btn-primary">
+        検索
+    </button>
     
     <div class="container mt-5">
         <!-- このdivの中に出力される -->
