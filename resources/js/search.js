@@ -34,6 +34,36 @@ document
         });
     });
 
+document
+    .getElementById("searchForm2")
+    .addEventListener("submit", function (event) {
+        event.preventDefault();
+        const keywordInput = document.getElementById("keyword2").value;
+        getAll("users").then((users) => {
+            console.log(users);
+
+            let output = "";
+            let foundUser = false;
+
+            users.forEach((user) => {
+                console.log("データ" + user.personality_id);
+                console.log("キーワード" + keywordInput);
+                if (user.personality_id === keywordInput) {
+                    output += `<div id=${user.id}>`;
+                    output += `<p>${user.name}さん</p>`;
+                    output += `<button onclick="location.href='detail?id=${user.id}'" type="button" class="btn btn-primary">詳細を見る</button>`;
+                    output += `</div>`;
+                    foundUser = true;
+                }
+            });
+            if (!foundUser) {
+                output = "<p>該当するユーザーは見つかりませんでした。</p>";
+            }
+
+            document.querySelector("#output").innerHTML = output;
+        });
+    });
+
 // document
 //     .getElementById("searchForm")
 //     .addEventListener("submit", function (event) {
