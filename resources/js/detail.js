@@ -75,7 +75,6 @@ getAll("sentences").then((sentences) => {
                 output += `</div>`;
 
                 //output2で使うために変数に入れる。
-                
             }
         });
         // output変数の内容をHTMLに挿入
@@ -88,10 +87,10 @@ getAll("sentences").then((sentences) => {
 getAll("editSentences").then((editSentences) => {
     getAll("sentences").then((sentences) => {
         let output = ""; // output変数を外側に定義
+        let hasEditComment = false; // 編集コメントがあるかどうかのフラグ
 
         editSentences.forEach((edit) => {
             let editSentences = ""; // ユーザーごとの出力を保持する変数
-
             sentences.forEach((item) => {
                 if (edit.sentence_id == item.id && edit.user_id == id) {
                     editSentences += `<div>`;
@@ -99,12 +98,16 @@ getAll("editSentences").then((editSentences) => {
                     editSentences += `<p class = "text-gray-500">${item.content}</p>`;
                     editSentences += `<p class = "font-bold">${edit.content}</p>`;
                     editSentences += `</div>`;
+                    hasEditComment = true; // 編集コメントがあることをフラグに記録
                 }
             });
 
             output += editSentences; // ユーザーごとの出力をoutputに追加
         });
 
+        if (!hasEditComment) {
+            output += `<p>まだ編集コメントはありません</p>`;
+        }
         document.querySelector("#output2").innerHTML = output; // outputをHTMLに挿入
     });
 });
@@ -112,7 +115,7 @@ getAll("editSentences").then((editSentences) => {
 // getAll("editSentences").then((editSentences) => {
 //     let output = ""; // output変数を外側に定義
 //     //sentence.idからsentenceを取得する
-    
+
 //     getOne("sentences",id).then((sentences) => {
 //         editSentences.forEach((item) => {
 //             console.log(item.user_id);
@@ -134,26 +137,26 @@ getAll("editSentences").then((editSentences) => {
 //         });
 //     })
 
-    // getOne("sentences", item.sentence_id).then((sentences) => {
-    //     editSentences.forEach((item) => {
-    //         console.log(item.user_id);
-    //         console.log(id);
-    //         // console.log(id)
-    //         console.log(sentences)
+// getOne("sentences", item.sentence_id).then((sentences) => {
+//     editSentences.forEach((item) => {
+//         console.log(item.user_id);
+//         console.log(id);
+//         // console.log(id)
+//         console.log(sentences)
 
-    //         if (id == item.user_id) {
-    //             // 比較演算子を修正
+//         if (id == item.user_id) {
+//             // 比較演算子を修正
 
-    //             // 条件に一致した場合の処理を追加
-    //             output += `<div>`;
-    //             output += `<div id="${item.id}">`;
-    //             // output += `<p>${sentences.content}</p>`;
-    //             output += `<p>${item.content}</p>`;
-    //             output += `</div >`;
-    //             output += `</div>`;
-    //         }
-    //     });
-    // })
-    // output変数の内容をHTMLに挿入
-    // document.querySelector("#output2").innerHTML = output;
+//             // 条件に一致した場合の処理を追加
+//             output += `<div>`;
+//             output += `<div id="${item.id}">`;
+//             // output += `<p>${sentences.content}</p>`;
+//             output += `<p>${item.content}</p>`;
+//             output += `</div >`;
+//             output += `</div>`;
+//         }
+//     });
+// })
+// output変数の内容をHTMLに挿入
+// document.querySelector("#output2").innerHTML = output;
 // });
