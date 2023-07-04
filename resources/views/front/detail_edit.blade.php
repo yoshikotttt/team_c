@@ -28,7 +28,7 @@
             </div>
             <div id="name1"></div>
             <div>
-                <p class="font-bold">(合ってる？合ってない？編集しちゃえ！)</p>
+                <p class="font-bold text-xs mr-4">(合ってる？合ってない？編集しちゃえ！)</p>>
             </div>
             <!-- このdivの中に性格タイプが出力される -->
             <div id="type"></div>
