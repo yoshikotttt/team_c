@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="pastel">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,98 +8,97 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
-<body>
-    
-    <form method="POST" action="{{ route('register') }}">
-        @csrf
+<body class="flex items-center justify-center h-screen">
+    <div class="m-auto inset-0">
+        <div class="m-2 mx-6">
+            <h2 class="text-center text-xl font-semibold text-gray-900 dark:text-white">新規登録</h2>
+        </div>
+        <form method="POST" action="{{ route('register') }}">
+            @csrf
 
-        <!-- Name -->
-        <div>
-            <!-- forでキーを設定。valueはラベルとして表示される-->
-            <x-input-label for="name" :value="'ユーザー名（ニックネーム）'" />
-            <!-- 実際にユーザーが入力した文字。idでキーを照合。old（name）は前回の入力履歴を表示させるため-->
-            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            <!-- 入力忘れ時等のエラー -->
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
-        </div>
-        
-        <!-- Email Address -->
-        <div class="mt-4">
-            <x-input-label for="email" :value="'Email'" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
-        
-        <!-- birthday -->
-        <div>
-            <!-- forでキーを設定。valueはラベルとして表示される-->
-            <x-input-label for="birthday" :value="'誕生日'" />
-            <!-- 実際にユーザーが入力した文字。idでキーを照合。old（birthday）は前回の入力履歴を表示させるため-->
-            <x-text-input id="birthday" class="block mt-1 w-full" type="date" name="birthday" :value="old('birthday')" required autofocus autocomplete="birthday" />
-            <!-- 入力忘れ時等のエラー -->
-            <x-input-error :messages="$errors->get('birthday')" class="mt-2" />
-        </div>
-        
-        <!-- personality_id -->
-        <div>
-            <!-- forでキーを設定。valueはラベルとして表示される-->
-            <x-input-label for="personality_id" :value="'性格タイプを選択してください。'" />
-            <!-- 実際にユーザーが入力した文字。idでキーを照合。old（birthday）は前回の入力履歴を表示させるため-->
-            <select id="personality_id" class="block mt-1 w-full" name="personality_id" required autofocus autocomplete="personality_id">
-                <option value="">選択してください</option>
-                <option value="1">INTJ 建築家_分析家</option>
-                <option value="2">INTP 論理学者_分析家</option>
-                <option value="3">ENTJ 指揮官_分析家</option>
-                <option value="4">ENTP 討論者_分析家</option>
-                <option value="5">INFJ 提唱者_外交官</option>
-                <option value="6">INFP 仲介者_外交官</option>
-                <option value="7">ENFJ 主人公_外交官</option>
-                <option value="8">ENFP 運動家_外交官</option>
-                <option value="9">ISTJ 管理者_番人</option>
-                <option value="10">ISFJ 擁護者_番人</option>
-                <option value="11">ESTJ 幹部_番人</option>
-                <option value="12">ESFJ 領事_番人</option>
-                <option value="13">ISTP 巨匠_探検家</option>
-                <option value="14">ISFP 冒険家_探検家</option>
-                <option value="15">ESTP 起業家_探検家</option>
-                <option value="16">ESFP エンターテイナー_探検家</option>
-            </select>
-            <x-input-error :messages="$errors->get('personality_id')" class="mt-2" />
-        </div>
+            <!-- Name -->
+            <div class="mt-6">
+                <label for="name" class="block font-medium text-sm text-gray-700">ユーザー名（ニックネーム）</label>
+                <input id="name" type="text" name="name" value="{{ old('name') }}" required autofocus autocomplete="name" class="input input-bordered input-primary w-full max-w-xs">
+                @error('name')
+                    <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                @enderror
+            </div>
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="'Password'" />
-            
-            <x-text-input id="password" class="block mt-1 w-full"
-            type="password"
-            name="password"
-            required autocomplete="new-password" />
-            
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-        
-        <!-- Confirm Password -->
-        <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="'Password確認'" />
-            
-            <x-text-input id="password_confirmation" class="block mt-1 w-full"
-            type="password"
-            name="password_confirmation" required autocomplete="new-password" />
-            
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-        </div>
+            <!-- Email Address -->
+            <div class="mt-6">
+                <label for="email" class="block font-medium text-sm text-gray-700">Email</label>
+                <input id="email" type="email" name="email" value="{{ old('email') }}" required autocomplete="username" class="input input-bordered input-primary w-full max-w-xs">
+                @error('email')
+                    <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                @enderror
+            </div>
 
-        <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}">
-                {{ 'すでに会員登録していますか?' }}
-            </a>
+            <!-- birthday -->
+            <div class="mt-6">
+                <label for="birthday" class="block font-medium text-sm text-gray-700">誕生日</label>
+                <input id="birthday" type="date" name="birthday" value="{{ old('birthday') }}" required autofocus autocomplete="birthday" class="input input-bordered input-primary w-full max-w-xs">
+                @error('birthday')
+                    <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                @enderror
+            </div>
+            <!-- personality_id -->
+            <div class="mt-6">
+                <label for="personality_id" class="block font-medium text-sm text-gray-700">16タイプ性格診断結果</label>
+                <select id="personality_id" name="personality_id" required autofocus autocomplete="personality_id" class="input input-bordered input-primary w-full max-w-xs">
+                    <option value="">選択してください</option>
+                    <option value="1">INTJ 建築家_分析家</option>
+                    <option value="2">INTP 論理学者_分析家</option>
+                    <option value="3">ENTJ 指揮官_分析家</option>
+                    <option value="4">ENTP 討論者_分析家</option>
+                    <option value="5">INFJ 提唱者_外交官</option>
+                    <option value="6">INFP 仲介者_外交官</option>
+                    <option value="7">ENFJ 主人公_外交官</option>
+                    <option value="8">ENFP 運動家_外交官</option>
+                    <option value="9">ISTJ 管理者_番人</option>
+                    <option value="10">ISFJ 擁護者_番人</option>
+                    <option value="11">ESTJ 幹部_番人</option>
+                    <option value="12">ESFJ 領事_番人</option>
+                    <option value="13">ISTP 巨匠_探検家</option>
+                    <option value="14">ISFP 冒険家_探検家</option>
+                    <option value="15">ESTP 起業家_探検家</option>
+                    <option value="16">ESFP エンターテイナー_探検家</option>
+                </select>
+                @error('personality_id')
+                    <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                @enderror
+            </div>
+            <!-- Password -->
+            <div class="mt-6">
+                <label for="password" class="block font-medium text-sm text-gray-700">Password</label>
+                <input id="password" type="password" name="password" required autocomplete="new-password" class="input input-bordered input-primary w-full max-w-xs">
+                @error('password')
+                    <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                @enderror
+            </div>
 
-            <x-primary-button class="ml-4">
-                {{ '登録' }}
-            </x-primary-button>
-        </div>
-    </form>
+            <!-- Confirm Password -->
+            <div class="mt-6">
+                <label for="password_confirmation" class="block font-medium text-sm text-gray-700">Password（確認）</label>
+                <input id="password_confirmation" type="password" name="password_confirmation" required autocomplete="new-password" class="input input-bordered input-primary w-full max-w-xs">
+                @error('password_confirmation')
+                    <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                @enderror
+            </div>
 
+            <div class="mt-4 flex justify-center">
+                <button class="btn btn-active btn-success btn-sm mx-2">
+                    {{ '上記の内容で登録する' }}
+                </button>
+            </div>
+
+            <div class="flex items-center justify-end mt-6">
+                <a class="text-xs underline" href="{{ route('login') }}">
+                    {{ 'すでに会員登録している方はこちら' }}
+                </a>
+
+            </div>
+        </form> 
+    </div>   
 </body>
 </html>
