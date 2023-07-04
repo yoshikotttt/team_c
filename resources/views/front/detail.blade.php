@@ -31,7 +31,7 @@
             </div>
             <div class="flex justify-between items-center">
                 {{-- <h2>{{ Auth::user()->name }}さんはこんなひと</h2> --}}
-                <p class="font-bold mr-12 ">(合ってる？合ってない？編集しちゃえ！)</p>
+                <p class="font-bold text-xs mr-4">(合ってる？合ってない？編集しちゃえ！)</p>
                 <div id="secretbtn"></div>
             </div>
             {{-- <div>
@@ -53,7 +53,7 @@
     <div class="container mt-5 mx-auto">
         <div class="flex flex-col items-center">
             <div class="text-center flex flex-col items-center max-w-3xl mx-auto bg-emerald-300 rounded-2xl m-4 py-4 px-20 sm:max-w-760 w-full">
-                <div id="name2" class="font-bold text-xl" >
+                <div id="name2" class="font-bold" >
                     {{-- <!-- これでconstで指定した関数呼び出せる？ -->
                 <h2>${username}さんはこんなひと</h2> --}}
                 </div>
