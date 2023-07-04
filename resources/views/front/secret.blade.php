@@ -10,7 +10,7 @@
 </head>
 <body class="text-indigo-900 bg-primary h-screen">
     <!-- 詳細画面へもどる -->
-    <div id="backbtn" class="btn btn-secondary m-5 bg-secondary text-xl text-indigo-900"></div>
+    <div id="backbtn"></div>
     <!-- クリックしたユーザーの情報を取ってくる -->
     <p class="text-center font-bold text-xl mt-4">問題！</p>
     <form id="userForm">
@@ -20,7 +20,7 @@
         <!-- 質問 -->
         <div class="mt-4">
             <p id="question" class="mt-40 text-center text-xl"></p>
-            <x-text-input id="content" class="block mt-20 h-8 w-full bg-white mb-10" type="date" name="birthday" :value="old('birhday')" required autocomplete="birhday" />
+            <input id="content"  class="block mt-20 bg-white mb-10 input input-bordered input-primary w-full max-w-xs mx-auto" type="date" name="birthday" :value="old('birhday')" required autocomplete="birhday" />
             <x-input-error :messages="$errors->get('birhday')" class="mt-2" />
         </div>
         
