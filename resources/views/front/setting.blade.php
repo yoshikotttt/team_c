@@ -12,7 +12,7 @@
     <!-- 既存(navigation.blade.php）の変更のものを参考に作成？ -->
 
     <!-- フッター（ログイン後固定） -->
-    <ul class="grid grid-flow-col text-center text-white bg-red-300 p-1 fixed bottom-0 w-full">
+    <ul class="grid grid-flow-col text-center text-gray-500 bg-gray-100 rounded-lg p-1">
         <li>
             <a href="timeline" class="flex justify-center py-4">Home</a>
         </li>
