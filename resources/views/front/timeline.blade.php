@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="pastel">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,15 +11,14 @@
 </head>
 <body>
     <!-- 検索 -->
-    <button onclick="location.href='search'" type="button" class="btn btn-primary">
+    <button onclick="location.href='search'" type="button" class="btn btn-active btn-primary btn-sm">
         検索
     </button>
     
-    <div class="container mt-5">
+    <div class="mt-5 flex justify-center">
         <!-- このdivの中に出力される -->
         <div id="output"></div>
     </div>
-    
 
     <!-- 条件分岐で表示するしない -->
         <!-- フッター（ログイン後固定） -->
