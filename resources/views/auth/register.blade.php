@@ -8,18 +8,18 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
-<body class="flex items-center justify-center h-screen">
+<body class="flex items-center justify-center h-screen bg-yellow-50">
     <div class="m-auto inset-0">
         <div class="m-2 mx-6">
-            <h2 class="text-center text-xl font-semibold text-gray-900 dark:text-white">新規登録</h2>
+            <h2 class="text-center text-xl font-semibold text-indigo-900">新規登録</h2>
         </div>
         <form method="POST" action="{{ route('register') }}">
             @csrf
 
             <!-- Name -->
             <div class="mt-6">
-                <label for="name" class="block font-medium text-sm text-gray-700">ユーザー名（ニックネーム）</label>
-                <input id="name" type="text" name="name" value="{{ old('name') }}" required autofocus autocomplete="name" class="input input-bordered input-primary w-full max-w-xs">
+                <label for="name" class="block font-medium text-sm text-indigo-900">ユーザー名（ニックネーム）</label>
+                <input id="name" type="text" name="name" value="{{ old('name') }}" required autofocus autocomplete="name" class="input input-bordered input-primary w-full max-w-xs text-indigo-900">
                 @error('name')
                     <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
                 @enderror
@@ -27,8 +27,8 @@
 
             <!-- Email Address -->
             <div class="mt-6">
-                <label for="email" class="block font-medium text-sm text-gray-700">Email</label>
-                <input id="email" type="email" name="email" value="{{ old('email') }}" required autocomplete="username" class="input input-bordered input-primary w-full max-w-xs">
+                <label for="email" class="block font-medium text-sm text-indigo-900">Email</label>
+                <input id="email" type="email" name="email" value="{{ old('email') }}" required autocomplete="username" class="input input-bordered input-primary w-full max-w-xs text-indigo-900">
                 @error('email')
                     <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
                 @enderror
@@ -36,16 +36,16 @@
 
             <!-- birthday -->
             <div class="mt-6">
-                <label for="birthday" class="block font-medium text-sm text-gray-700">誕生日</label>
-                <input id="birthday" type="date" name="birthday" value="{{ old('birthday') }}" required autofocus autocomplete="birthday" class="input input-bordered input-primary w-full max-w-xs">
+                <label for="birthday" class="block font-medium text-sm text-indigo-900">誕生日</label>
+                <input id="birthday" type="date" name="birthday" value="{{ old('birthday') }}" required autofocus autocomplete="birthday" class="input input-bordered input-primary w-full max-w-xs text-indigo-900">
                 @error('birthday')
                     <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
                 @enderror
             </div>
             <!-- personality_id -->
             <div class="mt-6">
-                <label for="personality_id" class="block font-medium text-sm text-gray-700">16タイプ性格診断結果</label>
-                <select id="personality_id" name="personality_id" required autofocus autocomplete="personality_id" class="input input-bordered input-primary w-full max-w-xs">
+                <label for="personality_id" class="block font-medium text-sm text-indigo-900">16タイプ性格診断結果</label>
+                <select id="personality_id" name="personality_id" required autofocus autocomplete="personality_id" class="input input-bordered input-primary w-full max-w-xs text-indigo-900">
                     <option value="">選択してください</option>
                     <option value="1">INTJ 建築家_分析家</option>
                     <option value="2">INTP 論理学者_分析家</option>
@@ -70,8 +70,8 @@
             </div>
             <!-- Password -->
             <div class="mt-6">
-                <label for="password" class="block font-medium text-sm text-gray-700">Password</label>
-                <input id="password" type="password" name="password" required autocomplete="new-password" class="input input-bordered input-primary w-full max-w-xs">
+                <label for="password" class="block font-medium text-sm text-indigo-900">Password</label>
+                <input id="password" type="password" name="password" required autocomplete="new-password" class="input input-bordered input-primary w-full max-w-xs text-indigo-900">
                 @error('password')
                     <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
                 @enderror
@@ -79,21 +79,21 @@
 
             <!-- Confirm Password -->
             <div class="mt-6">
-                <label for="password_confirmation" class="block font-medium text-sm text-gray-700">Password（確認）</label>
-                <input id="password_confirmation" type="password" name="password_confirmation" required autocomplete="new-password" class="input input-bordered input-primary w-full max-w-xs">
+                <label for="password_confirmation" class="block font-medium text-sm text-indigo-900">Password（確認）</label>
+                <input id="password_confirmation" type="password" name="password_confirmation" required autocomplete="new-password" class="input input-bordered input-primary w-full max-w-xs text-indigo-900">
                 @error('password_confirmation')
                     <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
                 @enderror
             </div>
 
             <div class="mt-4 flex justify-center">
-                <button class="btn btn-active btn-success btn-sm mx-2">
+                <button class="btn bg-rose-200 btn-sm mx-2 text-indigo-900">
                     {{ '上記の内容で登録する' }}
                 </button>
             </div>
 
             <div class="flex items-center justify-end mt-6">
-                <a class="text-xs underline" href="{{ route('login') }}">
+                <a class="text-xs underline text-indigo-900" href="{{ route('login') }}">
                     {{ 'すでに会員登録している方はこちら' }}
                 </a>
 
