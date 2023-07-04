@@ -33,7 +33,7 @@
         </div>
         
         <!-- 選択した文章 -->
-        <div class="card bg-primary h-60 mt-10 mx-8 font-bold text-center">
+        <div class="card bg-primary p-4 mt-10 mx-8 font-bold text-center">
             <div id="select"class="mt-10">
                 <!-- <x-input-label for="content" :value="'{{$sentences->sentences}}'" /> -->
             </div>
