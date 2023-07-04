@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
-<body class="text-indigo-900 bg-primary h-screen">
+<body class="text-indigo-900 bg-yellow-50 h-screen">
     <!-- 詳細画面へもどる -->
     <div id="backbtn"></div>
     <!-- クリックしたユーザーの情報を取ってくる -->
@@ -25,7 +25,7 @@
         </div>
         
         <div class="flex items-center justify-end mt-4 text-center">
-            <button class="m-auto btn secondary bg-secondary text-xl text-indigo-900">
+            <button class="m-auto btn  bg-rose-200 text-xl text-indigo-900">
                 {{ '回答' }}
             </button>
         </div>

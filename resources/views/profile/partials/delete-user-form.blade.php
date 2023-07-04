@@ -1,4 +1,4 @@
-<section class="space-y-6 flex flex-col items-center justify-center">
+<section class="space-y-6 flex flex-col items-center justify-center mb-28">
    
         <h2 class="text-center text-xl font-semibold text-gray-900">ログアウト</h2>
 

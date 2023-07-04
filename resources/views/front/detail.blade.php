@@ -10,7 +10,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body class="text-indigo-900 bg-yellow-50">
     {{-- 直接編集画面へ行く --}}
     <!-- <button onclick="location.href='detail_edit'" type="button" class="btn btn-primary">Edit</button> -->
 
@@ -20,7 +20,7 @@
 
     <div class="container mt-5 mx-auto">
         <div class="flex flex-col items-center">
-            <div class="flex flex-col items-center max-w-3xl mx-auto bg-error rounded-2xl m-4 py-4 px-20 sm:max-w-760 w-full">
+            <div class="flex flex-col items-center max-w-3xl mx-auto bg-rose-300 rounded-2xl m-4 py-4 px-20 sm:max-w-760 w-full">
 
                 <h2 id="name" class="text-xl p-2 font-bold"></h2>
                 <p id="type"></p>
@@ -41,7 +41,7 @@
             <!-- このdivの中に性格タイプが出力される -->
             <div id="type"></div>
             <!-- このdivの中に説明文が出力される -->
-            <div class="flex flex-col items-center justify-center max-w-3xl mx-auto bg-secondary rounded-2xl py-8 px-4 mt-6 sm:max-w-760 w-full max-w-760">
+            <div class="flex flex-col items-center justify-center max-w-3xl mx-auto bg-rose-100 rounded-2xl py-8 px-4 mt-6 sm:max-w-760 w-full max-w-760">
                 <p class="text-center mb-3 font-bold">16タイプ性格診断結果</p>
                 <div class="flex items-center justify-center">
                     <div id="output"></div>
@@ -52,7 +52,7 @@
 
     <div class="container mt-5 mx-auto">
         <div class="flex flex-col items-center">
-            <div class="text-center flex flex-col items-center max-w-3xl mx-auto bg-emerald-400 rounded-2xl m-4 py-4 px-20 sm:max-w-760 w-full">
+            <div class="text-center flex flex-col items-center max-w-3xl mx-auto bg-emerald-300 rounded-2xl m-4 py-4 px-20 sm:max-w-760 w-full">
                 <div id="name2" class="font-bold text-xl" >
                     {{-- <!-- これでconstで指定した関数呼び出せる？ -->
                 <h2>${username}さんはこんなひと</h2> --}}
@@ -60,7 +60,7 @@
             </div>
             {{-- <p class="font-bold">(みんなからはこう見えてるよ！)</p> --}}
             <!-- このdivの中に出力される -->
-            <div class="flex items-center justify-center rounded-2xl bg-accent py-8 px-4 mt-6 max-w-3xl mx-auto sm:max-w-760 w-full">
+            <div class="flex items-center justify-center rounded-2xl bg-emerald-100 py-8 px-4 mt-6 mb-20 max-w-3xl mx-auto sm:max-w-760 w-full">
                 <div id="output2"></div>
             </div>
         </div>
@@ -68,7 +68,7 @@
 
     <!-- 条件分岐で表示するしない -->
     <!-- フッター（ログイン後固定） -->
-    <ul class="grid grid-flow-col text-center text-gray-500 bg-gray-100 rounded-lg p-1">
+    <ul class="grid grid-flow-col text-center text-white bg-red-300 p-1 fixed bottom-0 w-full">
         <li>
             <a href="timeline" class="flex justify-center py-4">Home</a>
         </li>
