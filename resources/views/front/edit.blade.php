@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- 編集画面へもどる -->
-    <div id="backbtn" class="mt-5 btn btn-primary ml-4"></div>
+    <div id="backbtn"></div>
     <!-- クリックした文章のみを表示させる -->
     <p id="username" class="mt-10 text-center font-bold"></p>
     <p id="username" class="mt-5 text-center font-bold text-xl">編集しよう</p>
