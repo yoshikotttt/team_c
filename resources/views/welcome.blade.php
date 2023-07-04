@@ -17,7 +17,8 @@
             <div>
                 <div class="card m-2 mx-6 bg-emerald-200 text-primary-content">
                     <div class="card-body">
-                        <h2 class="text-center text-xl font-semibold text-indigo-900 ">性格診断アプリ<br>〇〇</h2>
+                        <h2 class="text-center text-xl font-semibold text-indigo-900 ">性格診断アプリ</h2>
+                        <h1 class="text-center text-4xl font-bold text-indigo-900">なかまもじ</h1>
                     </div>
                 </div>
                 <div class="flex justify-center">
