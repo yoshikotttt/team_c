@@ -9,12 +9,12 @@ const personalityId = element.dataset.personalityId;
 // console.log(personalityId);
 
 getAll("personalities").then((personalities) => {
-    console.log(personalityId);
+    // console.log(personalityId);
     // console.log(personalities);
     let output = ""; // output変数を外側に定義
 
     personalities.forEach((item) => {
-        console.log(item.id);
+        // console.log(item.id);
         if (personalityId == item.id) {
             // 比較演算子を修正
             // 条件に一致した場合の処理を追加
@@ -31,7 +31,7 @@ getAll("personalities").then((personalities) => {
         let output1 = ""; // output変数を外側に定義
 
         sentences.forEach((item) => {
-            console.log(item.personalities_id);
+            // console.log(item.personalities_id);
 
             if (personalityId == item.personalities_id) {
                 // 比較演算子を修正
@@ -55,7 +55,7 @@ getAll("editSentences").then((editSentences) => {
     let output = ""; // output変数を外側に定義
 
     editSentences.forEach((item) => {
-        console.log(item.personalities_id);
+        // console.log(item.personalities_id);
 
         if (user_id == item.user_id) {
             // 比較演算子を修正

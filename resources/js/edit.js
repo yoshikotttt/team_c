@@ -6,12 +6,12 @@ const idParam = params.get("id");
 const id = parseInt(idParam.split("?")[0]);
 const s = parseInt(idParam.split("?")[1]);
 
-console.log(id);
-console.log(s);
+// console.log(id);
+// console.log(s);
 const testid = isNaN(id);
 const tests = isNaN(s);
-console.log(testid);
-console.log(tests);
+// console.log(testid);
+// console.log(tests);
 
 let backbtn = "";
 backbtn += `<button onclick="location.href='detail_edit?id=${id}?${s}'" type="button" class="btn bg-blue-200">
@@ -30,7 +30,7 @@ output1 += `<input id="sentence_id" type="hidden" name="sentence_id" value=${s} 
 document.querySelector("#sentenceId").innerHTML = output1;
 
 getOne("users", id).then((user) => {
-    console.log(user);
+    // console.log(user);
     let output = "";
     output += `${user.name}さん`;
     document.querySelector("#username").innerHTML = output;
@@ -73,10 +73,10 @@ document
 
         if (!user_id || !sentence_id || !edit_user_id || !content) {
             alert("Please fill in all required fields.");
-            console.log(user_id);
-            console.log(sentence_id);
-            console.log(edit_user_id);
-            console.log(content);
+            // console.log(user_id);
+            // console.log(sentence_id);
+            // console.log(edit_user_id);
+            // console.log(content);
             return;
         }
 

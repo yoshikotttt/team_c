@@ -25,8 +25,6 @@ getOne("users", id).then((user) => {
     output3 += `<button onclick="location.href='secret?id=${user.id}'" type="button" class="btn bg-blue-200 text-indigo-900 text-sm">編集</button>`;
     document.querySelector("#secretbtn").innerHTML = output3;
 
-    const personality_id = user.personality_id;
-
     getAll("personalities").then((personalities) => {
         // console.log(personality_id);
         // console.log(personalities);

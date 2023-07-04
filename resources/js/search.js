@@ -10,14 +10,14 @@ document
         event.preventDefault();
         const keywordInput = document.getElementById("keyword").value;
         getAll("users").then((users) => {
-            console.log(users);
+            // console.log(users);
 
             let output = "";
             let foundUser = false;
 
             users.forEach((user) => {
-                console.log("データ" + user.original_id);
-                console.log("キーワード" + keywordInput);
+                // console.log("データ" + user.original_id);
+                // console.log("キーワード" + keywordInput);
                 if (user.original_id === keywordInput) {
                     output += `<div id=${user.id} class="card w-96 bg-rose-200 text-primary-content mb-1 text-indigo-900">`;
                     output += `<div class="card-body">`;
@@ -44,14 +44,14 @@ document
         event.preventDefault();
         const keywordInput = document.getElementById("keyword2").value;
         getAll("users").then((users) => {
-            console.log(users);
+            // console.log(users);
 
             let output = "";
             let foundUser = false;
 
             users.forEach((user) => {
-                console.log("データ" + user.personality_id);
-                console.log("キーワード" + keywordInput);
+                // console.log("データ" + user.personality_id);
+                // console.log("キーワード" + keywordInput);
                 if (user.personality_id === keywordInput) {
                     output += `<div id=${user.id} class="card w-96 bg-rose-200 text-primary-content mb-1 text-indigo-900">`;
                     output += `<div class="card-body">`;
