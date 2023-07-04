@@ -1,7 +1,9 @@
 import { getAll, getOne } from "./api.js";
 
 const params = new URLSearchParams(window.location.search);
-const id = params.get("id");
+// const id = params.get("id");
+const idParam = params.get("id");
+const id = parseInt(idParam.split("?")[0]);
 
 // getOne('users', id).then(user => {
 //     return user;
