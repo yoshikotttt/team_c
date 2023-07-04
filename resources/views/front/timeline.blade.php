@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
-<body class="bg-yellow-50">
+<body class="bg-yellow-50 h-screen">
     <!-- 検索 -->
     <div class="pt-4">
         <button onclick="location.href='search'" type="button" class="btn bg-blue-200 btn-sm text-indigo-900">
@@ -17,7 +17,7 @@
         </button>
     </div>
     
-    <div class="mt-5 flex justify-center">
+    <div class="mt-5 flex justify-center bg-yellow-50 pb-16">
         <!-- このdivの中に出力される -->
         <div id="output"></div>
     </div>

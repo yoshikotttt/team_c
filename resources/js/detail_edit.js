@@ -14,7 +14,7 @@ output += `<button onclick="location.href='detail?id=${id}'" type="button" class
 document.querySelector("#backbtn").innerHTML = output;
 
 getOne("users", id).then((user) => {
-    console.log(user);
+    // console.log(user);
     let output = "";
     output += `${user.name}さん`;
     document.querySelector("#name").innerHTML = output;
@@ -26,12 +26,12 @@ getOne("users", id).then((user) => {
     const personality_id = user.personality_id;
 
     getAll("personalities").then((personalities) => {
-        console.log(personality_id);
+        // console.log(personality_id);
         // console.log(personalities);
         let output = ""; // output変数を外側に定義
 
         personalities.forEach((item) => {
-            console.log(item.id);
+            // console.log(item.id);
             if (user.personality_id == item.id) {
                 // 比較演算子を修正
                 // 条件に一致した場合の処理を追加
@@ -55,12 +55,12 @@ getOne("users", id).then((user) => {
 
 getAll("sentences").then((sentences) => {
     getOne("users", id).then((user) => {
-        console.log(user.personality_id);
+        // console.log(user.personality_id);
 
         let output = ""; // output変数を外側に定義
 
         sentences.forEach((item) => {
-            console.log(item.personalities_id);
+            // console.log(item.personalities_id);
 
             if (user.personality_id == item.personalities_id) {
                 // 比較演算子を修正

@@ -12,7 +12,7 @@ getAll("users").then((users) => {
 
                     // idに基づいて背景色を設定
                     if (item.id >= 1 && item.id <= 4) {
-                        bgColor = "bg-violet-200";
+                        bgColor = "bg-purple-200";
                     } else if (item.id >= 5 && item.id <= 8) {
                         bgColor = "bg-emerald-200";
                     } else if (item.id >= 9 && item.id <= 12) {
@@ -23,7 +23,7 @@ getAll("users").then((users) => {
 
                     userOutput += `<div id=${item.id} class="card w-96 ${bgColor} text-primary-content mb-1 text-indigo-900">`;
                     userOutput += `<div class="card-body">`;
-                    userOutput += `<h2 class="text-indigo-900">${user.name}</h2>`;
+                    userOutput += `<h2 class="font-bold text-indigo-900">${user.name}</h2>`;
                     userOutput += `<p class="text-indigo-900">${item.name}</p>`;
                     userOutput += `<div class="card-actions justify-end">`;
                     userOutput += `<button onclick="location.href='detail?id=${user.id}'" class="btn text-indigo-900">詳細を見る</button>`;

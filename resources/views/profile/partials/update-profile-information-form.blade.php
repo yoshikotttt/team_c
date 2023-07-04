@@ -1,6 +1,6 @@
 <section class="flex items-center justify-center">
     <div class="max-w-md w-full">
-        <h2 class="text-center text-xl font-semibold text-gray-900 dark:text-white">会員情報</h2>
+        <h2 class="text-center text-xl font-semibold text-indigo-900">会員情報</h2>
 
 
         <form id="send-verification" method="post" action="{{ route('verification.send') }}">
@@ -13,7 +13,7 @@
 
             <div class="m-auto w-full max-w-xs">
                 <div class="mt-6">
-                    <label for="name" class="block font-medium text-sm text-gray-700">名前</label>
+                    <label for="name" class="block font-medium text-sm text-indigo-900">名前</label>
                 <input id="name" name="name" type="text"
                 class="input input-bordered input-primary w-full max-w-xs"
                     value="{{ old('name', $user->name) }}" required autofocus autocomplete="name" />
@@ -24,9 +24,9 @@
 
             <div class="m-auto w-full max-w-xs">
                 <div class="mt-6">
-                    <label for="email" class="block font-medium text-sm text-gray-700">Email</label>
+                    <label for="email" class="block font-medium text-sm text-indigo-900">Email</label>
                 <input id="email" name="email" type="email"
-                class="input input-bordered input-primary w-full max-w-xs"
+                class="input input-bordered input-primary w-full max-w-xs text-indigo-900"
                     value="{{ old('email', $user->email) }}" required autocomplete="username" />
                 @if ($errors->has('email'))
                     <p class="mt-2 text-sm text-red-600">{{ $errors->first('email') }}</p>
@@ -34,7 +34,7 @@
 
                 @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && !$user->hasVerifiedEmail())
                     <div>
-                        <p class="text-sm mt-2 text-gray-800 dark:text-gray-200">
+                        <p class="text-sm mt-2 text-indigo-900">
                             {{ __('Your email address is unverified.') }}
                             <button form="send-verification"
                                 class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800">
@@ -52,7 +52,7 @@
             </div>
 
             <div class="flex items-center justify-center gap-4">
-                <button type="submit" class="bg-purple-300 hover:bg-purple-200 text-white font-bold py-2 px-4 rounded mt-6">
+                <button type="submit" class="btn bg-rose-200 btn-sm text-indigo-900 mt-4">
                     {{ __('更新') }}
                 </button>
 

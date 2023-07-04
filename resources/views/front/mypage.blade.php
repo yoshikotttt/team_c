@@ -10,7 +10,7 @@
     <title>Document</title>
 </head>
 
-<body class="text-indigo-900 bg-yellow-50">
+<body class="text-indigo-900 bg-yellow-50 h-screen">
     <!-- 秘密の質問へリンク -->
 
     <div class="flex justify-end">
@@ -26,8 +26,8 @@
             </div>
             <div class="flex justify-between items-center">
                 {{-- <h2>{{ Auth::user()->name }}さんはこんなひと</h2> --}}
-                <p class="font-bold mr-12 ">(合ってる？合ってない？編集しちゃえ！)</p>
-                <button onclick="location.href='secret'" type="button" class="btn bg-blue-200">編集</button>
+                <p class="font-bold text-xs mr-4">(合ってる？合ってない？編集しちゃえ！)</p>
+                <button onclick="location.href='secret?id={{ Auth::user()->id }}'" type="button" class="btn bg-blue-200">編集</button>
             </div>
            
             <!-- このdivの中に性格タイプが出力される -->
