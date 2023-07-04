@@ -17,7 +17,7 @@
         </button>
     </div>
     
-    <div class="mt-5 flex justify-center">
+    <div class="mt-5 flex justify-center bg-yellow-50 pb-16">
         <!-- このdivの中に出力される -->
         <div id="output"></div>
     </div>
