@@ -8,7 +8,7 @@ const id = params.get("id");
 // });
 
 let output = "";
-output += `<button onclick="location.href='detail?id=${id}'" type="button" class="btn btn-primary">
+output += `<button onclick="location.href='detail?id=${id}'" type="button" class="btn bg-blue-200">
     戻る
 </button>`;
 document.querySelector("#backbtn").innerHTML = output;
@@ -69,7 +69,7 @@ getAll("sentences").then((sentences) => {
                 output += `<div>`;
                 output += `<div id="${item.id}" class="flex items-center pb-3">`;
                 output += `<p>${item.content}</p>`;
-                output += `<button onclick="location.href='edit?id=${user.id}?${item.id}'" type="button" class="btn btn-primary">編集</button>`;
+                output += `<button onclick="location.href='edit?id=${user.id}?${item.id}'" type="button" class="btn bg-blue-200 text-indigo-900">編集</button>`;
                 output += `</div >`;
                 output += `</div>`;
             }

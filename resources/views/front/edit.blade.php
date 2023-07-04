@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
-<body>
+<body class="text-indigo-900 bg-yellow-50 h-screen">
     <!-- 編集画面へもどる -->
     <div id="backbtn"></div>
     <!-- クリックした文章のみを表示させる -->
@@ -33,7 +33,7 @@
         </div>
         
         <!-- 選択した文章 -->
-        <div class="card bg-primary h-60 mt-10 mx-8 font-bold text-center">
+        <div class="card bg-rose-100 p-4 mt-10 mx-8 font-bold text-center">
             <div id="select"class="mt-10">
                 <!-- <x-input-label for="content" :value="'{{$sentences->sentences}}'" /> -->
             </div>
@@ -41,16 +41,16 @@
             <!-- 更新内容 -->
             <div class="mt-4">
                 <label class="font-bold text-center block font-medium text-sm text-gray-700" for="content" >あなたからみた印象を書いてね</label>
-                <input id="content" class="block mt-8 w-4/5 h-20 mx-auto" type="text" name="content" :value="old('content')" required autocomplete="content" />
+                <input id="content" class="block mt-8 w-4/5 h-14 mx-auto" type="text" name="content" :value="old('content')" required autocomplete="content" />
                 <x-input-error :messages="$errors->get('content')" class="mt-2" />
             </div>
         </div>
         
-        <div class="flex items-center justify-end mt-4 btn btn-primary mx-40">
+        <div class="flex items-center justify-end mt-4 btn  bg-rose-200 mx-40">
             {{-- <x-primary-button class="ml-4">
                 {{ '更新' }}
             </x-primary-button> --}}
-            <button type="submit" class="primary mx-auto bg-primary">更新</button>
+            <button type="submit" class=" mx-auto">更新</button>
         </div>
     </form>
     <!-- JS, Popper.js, and jQuery -->
