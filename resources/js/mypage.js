@@ -38,7 +38,7 @@ getAll("personalities").then((personalities) => {
 
                 // 条件に一致した場合の処理を追加
                 output1 += `<div>`;
-                output1 += `<div id="${item.id}">`;
+                output1 += `<div id="${item.id}" class="pb-2">`;
                 output1 += `<p>${item.content}</p>`;
                 output1 += `</div >`;
                 output1 += `</div>`;
@@ -62,7 +62,7 @@ getAll("editSentences").then((editSentences) => {
 
             // 条件に一致した場合の処理を追加
             output += `<div>`;
-            output += `<div id="${item.id}">`;
+            output += `<div id="${item.id}" class="pb-2">`;
             output += `<p>${item.content}</p>`;
             output += `</div >`;
             output += `</div>`;

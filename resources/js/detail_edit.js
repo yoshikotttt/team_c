@@ -20,7 +20,7 @@ getOne("users", id).then((user) => {
     document.querySelector("#name").innerHTML = output;
 
     let output1 = "";
-    output1 += `<h2>${user.name}さんはこんな人</h2>`;
+    output1 += `<h2>${user.name}さんはどんな人？</h2>`;
     document.querySelector("#name1").innerHTML = output1;
 
     const personality_id = user.personality_id;
@@ -67,7 +67,7 @@ getAll("sentences").then((sentences) => {
 
                 // 条件に一致した場合の処理を追加
                 output += `<div>`;
-                output += `<div id="${item.id}">`;
+                output += `<div id="${item.id}" class="flex items-center pb-3">`;
                 output += `<p>${item.content}</p>`;
                 output += `<button onclick="location.href='edit?id=${user.id}?${item.id}'" type="button" class="btn btn-primary">編集</button>`;
                 output += `</div >`;
