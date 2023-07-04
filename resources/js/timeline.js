@@ -12,7 +12,7 @@ getAll("users").then((users) => {
 
                     // idに基づいて背景色を設定
                     if (item.id >= 1 && item.id <= 4) {
-                        bgColor = "bg-violet-200";
+                        bgColor = "bg-purple-200";
                     } else if (item.id >= 5 && item.id <= 8) {
                         bgColor = "bg-emerald-200";
                     } else if (item.id >= 9 && item.id <= 12) {
