@@ -31,15 +31,22 @@ class RegisteredUserController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'name' => ['required', 'string', 'max:255'], //元からある
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],  //元からある
+            'birthday' => ['required', 'date'],
+            // 'original_id' => ['required', 'string', 'max:8'],
+            'personality_id' => ['required', 'int'],
+            'password' => ['required', 'confirmed', Rules\Password::defaults()],  //元からある
         ]);
 
         $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
+            'name' => $request->name,  //元からある
+            'email' => $request->email,   //元からある
+            'birthday' => $request->birthday,
+            'password' => $request->password,  //元からある
+            'password' => Hash::make($request->password),   //元からある
+             // 'original_id' => $request->original_id,
+             'personality_id' => $request->personality_id,
         ]);
 
         event(new Registered($user));
@@ -48,4 +55,16 @@ class RegisteredUserController extends Controller
 
         return redirect(RouteServiceProvider::HOME);
     }
+
+    public function index()
+    {
+       
+        // users テーブルの全データを取得して JSON 形式で返す
+        $users = User::all();
+        // var_dump($users);
+     
+        return response()->json($users);  
+        // exit();
+    }
+
 }
