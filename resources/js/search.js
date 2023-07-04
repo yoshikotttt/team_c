@@ -31,7 +31,7 @@ document
                 }
             });
             if (!foundUser) {
-                output = "<p>該当するユーザーは見つかりませんでした。</p>";
+                output = `<p class="text-indigo-900">該当するユーザーは見つかりませんでした。</p>`;
             }
 
             document.querySelector("#output").innerHTML = output;
@@ -65,7 +65,7 @@ document
                 }
             });
             if (!foundUser) {
-                output = "<p>該当するユーザーは見つかりませんでした。</p>";
+                output = `<p class="text-indigo-900">該当するユーザーは見つかりませんでした。</p>`;
             }
 
             document.querySelector("#output").innerHTML = output;
