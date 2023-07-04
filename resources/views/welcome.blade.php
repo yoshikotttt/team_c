@@ -25,7 +25,7 @@
                 </div>
 
                 <div class="mt-6">
-                    <div class="card m-2 mx-12 mb-6 bg-default text-primary-content">
+                    <div class="card m-2 mx-12 mb-6 bg-primary text-primary-content">
                         <div class="card-body">
                             <a href="{{ route('explanation') }}">
                             
@@ -37,7 +37,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="card m-2 mx-12 mb-6 bg-default text-primary-content">
+                    <div class="card m-2 mx-12 mb-6 bg-primary text-primary-content">
                         <div class="card-body">
                             <a href="https://www.16personalities.com/ja" target="_blank">
                             
