@@ -19,15 +19,19 @@ document
                 console.log("データ" + user.original_id);
                 console.log("キーワード" + keywordInput);
                 if (user.original_id === keywordInput) {
-                    output += `<div id=${user.id}>`;
-                    output += `<p>${user.name}さん</p>`;
-                    output += `<button onclick="location.href='detail?id=${user.id}'" type="button" class="btn btn-primary">詳細を見る</button>`;
+                    output += `<div id=${user.id} class="card w-96 bg-rose-200 text-primary-content mb-1 text-indigo-900">`;
+                    output += `<div class="card-body">`;
+                    output += `<p class="text-indigo-900">${user.name}さん</p>`;
+                    output += `<div class="card-actions justify-end">`;
+                    output += `<button onclick="location.href='detail?id=${user.id}'" class="btn text-indigo-900">詳細を見る</button>`;
+                    output += `</div>`;
+                    output += `</div>`;
                     output += `</div>`;
                     foundUser = true;
                 }
             });
             if (!foundUser) {
-                output = "<p>該当するユーザーは見つかりませんでした。</p>";
+                output = `<p class="text-indigo-900">該当するユーザーは見つかりませんでした。</p>`;
             }
 
             document.querySelector("#output").innerHTML = output;
@@ -49,15 +53,19 @@ document
                 console.log("データ" + user.personality_id);
                 console.log("キーワード" + keywordInput);
                 if (user.personality_id === keywordInput) {
-                    output += `<div id=${user.id}>`;
-                    output += `<p>${user.name}さん</p>`;
-                    output += `<button onclick="location.href='detail?id=${user.id}'" type="button" class="btn btn-primary">詳細を見る</button>`;
+                    output += `<div id=${user.id} class="card w-96 bg-rose-200 text-primary-content mb-1 text-indigo-900">`;
+                    output += `<div class="card-body">`;
+                    output += `<p class="text-indigo-900">${user.name}さん</p>`;
+                    output += `<div class="card-actions justify-end">`;
+                    output += `<button onclick="location.href='detail?id=${user.id}'" class="btn text-indigo-900">詳細を見る</button>`;
+                    output += `</div>`;
+                    output += `</div>`;
                     output += `</div>`;
                     foundUser = true;
                 }
             });
             if (!foundUser) {
-                output = "<p>該当するユーザーは見つかりませんでした。</p>";
+                output = `<p class="text-indigo-900">該当するユーザーは見つかりませんでした。</p>`;
             }
 
             document.querySelector("#output").innerHTML = output;

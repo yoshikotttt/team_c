@@ -12,21 +12,21 @@ getAll("users").then((users) => {
 
                     // idに基づいて背景色を設定
                     if (item.id >= 1 && item.id <= 4) {
-                        bgColor = "bg-primary";
+                        bgColor = "bg-violet-200";
                     } else if (item.id >= 5 && item.id <= 8) {
-                        bgColor = "bg-accent";
+                        bgColor = "bg-emerald-200";
                     } else if (item.id >= 9 && item.id <= 12) {
-                        bgColor = "bg-info";
+                        bgColor = "bg-blue-200";
                     } else if (item.id >= 13 && item.id <= 16) {
-                        bgColor = "bg-default";
+                        bgColor = "bg-amber-200";
                     }
 
-                    userOutput += `<div id=${item.id} class="card w-96 ${bgColor} text-primary-content mb-1">`;
+                    userOutput += `<div id=${item.id} class="card w-96 ${bgColor} text-primary-content mb-1 text-indigo-900">`;
                     userOutput += `<div class="card-body">`;
-                    userOutput += `<h2>${user.name}</h2>`;
-                    userOutput += `<p>${item.name}</p>`;
+                    userOutput += `<h2 class="text-indigo-900">${user.name}</h2>`;
+                    userOutput += `<p class="text-indigo-900">${item.name}</p>`;
                     userOutput += `<div class="card-actions justify-end">`;
-                    userOutput += `<button onclick="location.href='detail?id=${user.id}'" class="btn">詳細を見る</button>`;
+                    userOutput += `<button onclick="location.href='detail?id=${user.id}'" class="btn text-indigo-900">詳細を見る</button>`;
                     userOutput += `</div>`;
                     userOutput += `</div>`;
                     userOutput += `</div>`;
