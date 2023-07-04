@@ -1,6 +1,6 @@
 <section class="space-y-6 flex flex-col items-center justify-center">
    
-        <h2 class="text-center text-xl font-semibold text-gray-900 dark:text-white">ログアウト</h2>
+        <h2 class="text-center text-xl font-semibold text-gray-900">ログアウト</h2>
 
 
         {{-- <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
