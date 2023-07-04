@@ -8,26 +8,26 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
-<body>
+<body class="text-indigo-900 bg-primary h-screen">
     <!-- 詳細画面へもどる -->
     <div id="backbtn"></div>
     <!-- クリックしたユーザーの情報を取ってくる -->
-    <p>問題！</p>
+    <p class="text-center font-bold text-xl mt-4">問題！</p>
     <form id="userForm">
         @csrf
 
 
         <!-- 質問 -->
         <div class="mt-4">
-            <p id="question"></p>
-            <x-text-input id="content" class="block mt-1 w-full" type="date" name="birthday" :value="old('birhday')" required autocomplete="birhday" />
+            <p id="question" class="mt-40 text-center text-xl"></p>
+            <input id="content"  class="block mt-20 bg-white mb-10 input input-bordered input-primary w-full max-w-xs mx-auto" type="date" name="birthday" :value="old('birhday')" required autocomplete="birhday" />
             <x-input-error :messages="$errors->get('birhday')" class="mt-2" />
         </div>
         
-        <div class="flex items-center justify-end mt-4">
-            <x-primary-button class="ml-4">
+        <div class="flex items-center justify-end mt-4 text-center">
+            <button class="m-auto btn secondary bg-secondary text-xl text-indigo-900">
                 {{ '回答' }}
-            </x-primary-button>
+            </button>
         </div>
     </form>
     <!-- JS, Popper.js, and jQuery -->

@@ -5,7 +5,7 @@ const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
 let output = "";
-output += `<button onclick="location.href='detail?id=${id}'" type="button" class="btn btn-primary">
+output += `<button onclick="location.href='detail?id=${id}'" type="button" class= "btn btn-secondary m-5 bg-secondary text-xl text-indigo-900">
     戻る
 </button>`;
 document.querySelector("#backbtn").innerHTML = output;
