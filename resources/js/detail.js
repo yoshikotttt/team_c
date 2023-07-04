@@ -13,12 +13,12 @@ getOne("users", id).then((user) => {
     output += `${user.name}さん`;
     document.querySelector("#name").innerHTML = output;
 
-    let output1 = "";
-    output1 += `<h2>${user.name}さんはこんな人</h2>`;
-    document.querySelector("#name1").innerHTML = output1;
+    // let output1 = "";
+    // output1 += `<h2>${user.name}さんはこんな人</h2>`;
+    // document.querySelector("#name1").innerHTML = output1;
 
     let output2 = "";
-    output2 += `<h2>つまり、${user.name}さんはこんな人</h2>`;
+    output2 += `<h2>つまり、<br>${user.name}さんはこんな人</h2>`;
     document.querySelector("#name2").innerHTML = output2;
 
     let output3 = "";
@@ -69,7 +69,7 @@ getAll("sentences").then((sentences) => {
 
                 // 条件に一致した場合の処理を追加
                 output += `<div>`;
-                output += `<div id="${item.id}">`;
+                output += `<div id="${item.id}" class="pb-2">`;
                 output += `<p>${item.content}</p>`;
                 output += `</div >`;
                 output += `</div>`;
@@ -96,7 +96,7 @@ getAll("editSentences").then((editSentences) => {
                     editSentences += `<div>`;
                     editSentences += `<div id="${edit.id}">`;
                     editSentences += `<p class = "text-gray-500">${item.content}</p>`;
-                    editSentences += `<p class = "font-bold">${edit.content}</p>`;
+                    editSentences += `<p class = "font-bold pb-2">${edit.content}</p>`;
                     editSentences += `</div>`;
                     hasEditComment = true; // 編集コメントがあることをフラグに記録
                 }
