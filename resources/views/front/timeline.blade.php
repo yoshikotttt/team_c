@@ -9,11 +9,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
-<body>
+<body class="bg-yellow-50">
     <!-- 検索 -->
-    <button onclick="location.href='search'" type="button" class="btn btn-active btn-primary btn-sm">
-        検索
-    </button>
+    <div class="pt-4">
+        <button onclick="location.href='search'" type="button" class="btn bg-blue-200 btn-sm text-indigo-900">
+            検索
+        </button>
+    </div>
     
     <div class="mt-5 flex justify-center">
         <!-- このdivの中に出力される -->
@@ -22,12 +24,12 @@
 
     <!-- 条件分岐で表示するしない -->
         <!-- フッター（ログイン後固定） -->
-        <ul class="grid grid-flow-col text-center text-gray-500 bg-gray-100 rounded-lg p-1">
+        <ul class="grid grid-flow-col text-center text-white bg-red-300 p-1 fixed bottom-0 w-full">
             <li>
-                <a href="timeline" class="flex justify-center py-4">Home</a>
+                <a href="/front/timeline" class="flex justify-center py-4">Home</a>
             </li>
             <li>
-                <a href="mypage" class="flex justify-center py-4">mypage</a>
+                <a href="/front/mypage" class="flex justify-center py-4">mypage</a>
             </li>
             <li>
                 <a href="/profile" class="flex justify-center py-4">設定</a>
