@@ -27,7 +27,7 @@
             <div class="flex justify-between items-center">
                 {{-- <h2>{{ Auth::user()->name }}さんはこんなひと</h2> --}}
                 <p class="font-bold mr-12 ">(合ってる？合ってない？編集しちゃえ！)</p>
-                <button onclick="location.href='secret'" type="button" class="btn bg-blue-200">編集</button>
+                <button onclick="location.href='secret?id={{ Auth::user()->id }}'" type="button" class="btn bg-blue-200">編集</button>
             </div>
            
             <!-- このdivの中に性格タイプが出力される -->
