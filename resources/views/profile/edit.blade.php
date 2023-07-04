@@ -10,31 +10,30 @@
     <title>Document</title>
 </head>
 
-<body class="flex items-center justify-center">
-    <div class="m-auto">
+<body>
         <div class="py-6">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
                 <div class="p-4 sm:p-8 bg-white sm:rounded-lg">
-                    <div class="max-w-xl">
+                    <div class="max-w-xl m-auto">
                         @include('profile.partials.update-profile-information-form')
                     </div>
                 </div>
 
                 <div class="p-4 sm:p-8 bg-white sm:rounded-lg">
-                    <div class="max-w-xl">
+                    <div class="max-w-xl m-auto">
                         @include('profile.partials.update-password-form')
                     </div>
                 </div>
 
                 <div class="p-4 sm:p-8 bg-white sm:rounded-lg">
-                    <div class="max-w-xl">
+                    <div class="max-w-xl m-auto">
                         @include('profile.partials.delete-user-form')
                     </div>
                 </div>
             </div>
         </div>
         <!-- フッター（ログイン後固定） -->
-        <ul class="grid grid-flow-col text-center text-gray-500 bg-gray-100 rounded-lg p-1">
+        <ul class="grid grid-flow-col text-center text-white bg-red-300 p-1 fixed bottom-0 w-full">
             <li>
                 <a href="/front/timeline" class="flex justify-center py-4">Home</a>
             </li>
@@ -45,7 +44,6 @@
                 <a href="/profile" class="flex justify-center py-4">設定</a>
             </li>
         </ul>
-    </div>
 </body>
 
 </html>
