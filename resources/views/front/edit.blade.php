@@ -33,14 +33,14 @@
         </div>
         
         <!-- 選択した文章 -->
-        <div class="card bg-primary h-60 mt-10 mx-8 font-bold text-center">
+        <div class="card bg-primary p-4 mt-10 mx-8 font-bold text-center">
             <div id="select"class="mt-10">
                 <!-- <x-input-label for="content" :value="'{{$sentences->sentences}}'" /> -->
             </div>
     
             <!-- 更新内容 -->
             <div class="mt-4">
-                <label class="font-bold text-center block font-medium text-sm text-gray-700" for="content" >あなたからみた印象を書いてね</label>
+                <label class="font-bold text-center block text-sm text-gray-700" for="content" >あなたからみた印象を書いてね</label>
                 <input id="content" class="block mt-8 w-4/5 h-20 mx-auto" type="text" name="content" :value="old('content')" required autocomplete="content" />
                 <x-input-error :messages="$errors->get('content')" class="mt-2" />
             </div>

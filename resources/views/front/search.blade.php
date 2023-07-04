@@ -24,7 +24,7 @@
             <x-text-input id="keyword" class="block h-10 mt-5 w-4/5 mx-auto" type="text" name="keyword" :value="old('keyword')" />
         </div>
         
-        <div class="flex justify-center justify-end mt-4 mx-auto">
+        <div class="flex justify-center  mt-4 mx-auto">
             {{-- <x-primary-button class="ml-4">
                 {{ '検索' }}
             </x-primary-button> --}}
@@ -38,7 +38,7 @@
         <!-- キーワード検索エリア -->
         <div class="mt-24">
             <x-input-label class="mt-3 text-center" for="keyword2" :value="'性格タイプで検索'" />
-            <select id="keyword2" class="block mt-1 w-4/5 mx-auto h-10 mt-5" name="keyword2" required autofocus autocomplete="keyword2">
+            <select id="keyword2" class="block  w-4/5 mx-auto h-10 mt-5" name="keyword2" required autofocus autocomplete="keyword2">
                 <option value="">選択してください</option>
                 <option value="1">INTJ 建築家_分析家</option>
                 <option value="2">INTP 論理学者_分析家</option>
@@ -59,7 +59,7 @@
             </select>
         </div>
         
-        <div class="flex justify-center justify-end mt-4">
+        <div class="flex justify-center  mt-4">
             {{-- <x-primary-button class="ml-4">
                 {{ '検索' }}
             </x-primary-button> --}}
