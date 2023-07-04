@@ -67,7 +67,7 @@ getAll("sentences").then((sentences) => {
 
                 // 条件に一致した場合の処理を追加
                 output += `<div>`;
-                output += `<div id="${item.id}" class="flex items-center">`;
+                output += `<div id="${item.id}" class="flex items-center pb-3">`;
                 output += `<p>${item.content}</p>`;
                 output += `<button onclick="location.href='edit?id=${user.id}?${item.id}'" type="button" class="btn btn-primary">編集</button>`;
                 output += `</div >`;

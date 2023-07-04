@@ -1,64 +1,68 @@
-<section>
-    <header>
-        <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
-            {{ __('会員情報') }}
-        </h2>
+<section class="flex items-center justify-center">
+    <div class="max-w-md w-full">
+        <h2 class="text-center text-xl font-semibold text-gray-900 dark:text-white">会員情報</h2>
 
-        {{-- <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-            {{ __("Update your account's profile information and email address.") }}
-        </p> --}}
-    </header>
 
-    <form id="send-verification" method="post" action="{{ route('verification.send') }}">
-        @csrf
-    </form>
+        <form id="send-verification" method="post" action="{{ route('verification.send') }}">
+            @csrf
+        </form>
 
-    <form method="post" action="{{ route('profile.update') }}" class="mt-6 space-y-6">
-        @csrf
-        @method('patch')
+        <form method="post" action="{{ route('profile.update') }}" class="mt-6 space-y-6">
+            @csrf
+            @method('patch')
 
-        <div>
-            <x-input-label for="name" :value="__('名前')" />
-            <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $user->name)" required autofocus autocomplete="name" />
-            <x-input-error class="mt-2" :messages="$errors->get('name')" />
-        </div>
+            <div class="m-auto w-full max-w-xs">
+                <div class="mt-6">
+                    <label for="name" class="block font-medium text-sm text-gray-700">名前</label>
+                <input id="name" name="name" type="text"
+                class="input input-bordered input-primary w-full max-w-xs"
+                    value="{{ old('name', $user->name) }}" required autofocus autocomplete="name" />
+                @if ($errors->has('name'))
+                    <p class="mt-2 text-sm text-red-600">{{ $errors->first('name') }}</p>
+                @endif
+            </div>
 
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" name="email" type="email" class="mt-1 block w-full" :value="old('email', $user->email)" required autocomplete="username" />
-            <x-input-error class="mt-2" :messages="$errors->get('email')" />
+            <div class="m-auto w-full max-w-xs">
+                <div class="mt-6">
+                    <label for="email" class="block font-medium text-sm text-gray-700">Email</label>
+                <input id="email" name="email" type="email"
+                class="input input-bordered input-primary w-full max-w-xs"
+                    value="{{ old('email', $user->email) }}" required autocomplete="username" />
+                @if ($errors->has('email'))
+                    <p class="mt-2 text-sm text-red-600">{{ $errors->first('email') }}</p>
+                @endif
 
-            @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && ! $user->hasVerifiedEmail())
-                <div>
-                    <p class="text-sm mt-2 text-gray-800 dark:text-gray-200">
-                        {{ __('Your email address is unverified.') }}
-
-                        <button form="send-verification" class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800">
-                            {{ __('Click here to re-send the verification email.') }}
-                        </button>
-                    </p>
-
-                    @if (session('status') === 'verification-link-sent')
-                        <p class="mt-2 font-medium text-sm text-green-600 dark:text-green-400">
-                            {{ __('A new verification link has been sent to your email address.') }}
+                @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && !$user->hasVerifiedEmail())
+                    <div>
+                        <p class="text-sm mt-2 text-gray-800 dark:text-gray-200">
+                            {{ __('Your email address is unverified.') }}
+                            <button form="send-verification"
+                                class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800">
+                                {{ __('Click here to re-send the verification email.') }}
+                            </button>
                         </p>
-                    @endif
-                </div>
-            @endif
-        </div>
 
-        <div class="flex items-center gap-4">
-            <x-primary-button>{{ __(' 更新') }}</x-primary-button>
+                        @if (session('status') === 'verification-link-sent')
+                            <p class="mt-2 font-medium text-sm text-green-600 dark:text-green-400">
+                                {{ __('A new verification link has been sent to your email address.') }}
+                            </p>
+                        @endif
+                    </div>
+                @endif
+            </div>
 
-            @if (session('status') === 'profile-updated')
-                <p
-                    x-data="{ show: true }"
-                    x-show="show"
-                    x-transition
-                    x-init="setTimeout(() => show = false, 2000)"
-                    class="text-sm text-gray-600 dark:text-gray-400"
-                >{{ __(' 更新されました.') }}</p>
-            @endif
-        </div>
-    </form>
+            <div class="flex items-center justify-center gap-4">
+                <button type="submit" class="bg-purple-300 hover:bg-purple-200 text-white font-bold py-2 px-4 rounded mt-6">
+                    {{ __('更新') }}
+                </button>
+
+                @if (session('status') === 'profile-updated')
+                    <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 2000)"
+                        class="text-sm text-gray-600 dark:text-gray-400">{{ __('更新されました。') }}</p>
+                @endif
+            </div>
+
+        </form>
+    </div>
 </section>
+

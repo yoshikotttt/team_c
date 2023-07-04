@@ -18,7 +18,7 @@
     </div>
     <div class="container mt-5 mx-auto">
         <div class="flex flex-col items-center">
-            <div class="flex flex-col items-center max-w-3xl mx-auto bg-slate-400 rounded-2xl m-4 py-4 px-20 sm:max-w-760 w-full">
+            <div class="flex flex-col items-center max-w-3xl mx-auto bg-error rounded-2xl m-4 py-4 px-20 sm:max-w-760 w-full">
                 <h2 class="text-xl p-2 font-bold">{{ Auth::user()->name }}さん</h2>
                 <input type="hidden" id="type" data-personality-id="{{ Auth::user()->personality_id }}">
                 <input type="hidden" id="use_id" data-user-id="{{ Auth::user()->id }}">
@@ -34,7 +34,7 @@
             <div id="type"></div>
             <!-- このdivの中に説明文が出力される -->
 
-            <div class="flex flex-col items-center justify-center max-w-3xl mx-auto bg-slate-400 rounded-2xl py-8 px-4 mt-6 sm:max-w-760 w-full max-w-760">
+            <div class="flex flex-col items-center justify-center max-w-3xl mx-auto bg-secondary rounded-2xl py-8 px-4 mt-6 sm:max-w-760 w-full max-w-760">
                 <p class="text-center mb-3 font-bold">16タイプ性格診断結果</p>
                 <div class="flex items-center justify-center">
                     <div id="output"></div>
@@ -45,13 +45,13 @@
 
     <div class="container mt-5 mx-auto">
         <div class="flex flex-col items-center">
-            <div class="text-center flex flex-col items-center max-w-3xl mx-auto bg-slate-400 rounded-2xl m-4 py-4 px-20 sm:max-w-760 w-full">
+            <div class="text-center flex flex-col items-center max-w-3xl mx-auto bg-emerald-400 rounded-2xl m-4 py-4 px-20 sm:max-w-760 w-full">
                 <h2 class="text-xl font-bold">つまり、<br>{{ Auth::user()->name }}さんはこんなひと</h2>
 
             </div>
             {{-- <p class="font-bold">(みんなからはこう見えてるよ！)</p> --}}
             <!-- このdivの中に出力される -->
-            <div class="flex items-center justify-center rounded-2xl bg-slate-400 py-8 px-4 mt-6 max-w-3xl mx-auto sm:max-w-760 w-full">
+            <div class="flex items-center justify-center rounded-2xl bg-accent py-8 px-4 mt-6 max-w-3xl mx-auto sm:max-w-760 w-full">
                 <div id="output2"></div>
             </div>
         </div>

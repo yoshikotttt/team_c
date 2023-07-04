@@ -1,48 +1,48 @@
-<section>
-    <header>
-        <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
-            {{ __('パスワード更新') }}
-        </h2>
+<section class="flex items-center justify-center">
+    <div class="max-w-md w-full">
 
-        <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-            {{ __('Ensure your account is using a long, random password to stay secure.') }}
-        </p>
-    </header>
+        <h2 class="text-center text-xl font-semibold text-gray-900 dark:text-white">パスワード変更</h2>
 
-    <form method="post" action="{{ route('password.update') }}" class="mt-6 space-y-6">
-        @csrf
-        @method('put')
 
-        <div>
-            <x-input-label for="current_password" :value="__('現在のパスワード')" />
-            <x-text-input id="current_password" name="current_password" type="password" class="mt-1 block w-full" autocomplete="current-password" />
-            <x-input-error :messages="$errors->updatePassword->get('current_password')" class="mt-2" />
-        </div>
+       
 
-        <div>
-            <x-input-label for="password" :value="__(' 新しいパスワード')" />
-            <x-text-input id="password" name="password" type="password" class="mt-1 block w-full" autocomplete="new-password" />
-            <x-input-error :messages="$errors->updatePassword->get('password')" class="mt-2" />
-        </div>
+        <form method="post" action="{{ route('password.update') }}" class="mt-6 space-y-6">
+            @csrf
+            @method('put')
 
-        <div>
-            <x-input-label for="password_confirmation" :value="__('新しいパスワード（確認）')" />
-            <x-text-input id="password_confirmation" name="password_confirmation" type="password" class="mt-1 block w-full" autocomplete="new-password" />
-            <x-input-error :messages="$errors->updatePassword->get('password_confirmation')" class="mt-2" />
-        </div>
+            <div class="m-auto w-full max-w-xs">
+                <div class="mt-6">
+                    <label for="current_password" class="block font-medium text-sm text-gray-700">現在のパスワード</label>
+                    <input id="current_password" name="current_password" type="password"
+                        class="input input-bordered input-primary w-full max-w-xs mb-2" autocomplete="current-password" />
+                    <x-input-error :messages="$errors->updatePassword->get('current_password')" class="mt-2" />
+                </div>
 
-        <div class="flex items-center gap-4">
-            <x-primary-button>{{ __('更新') }}</x-primary-button>
+                <div>
+                    <label for="password" class="block font-medium text-sm text-gray-700">新しいパスワード</label>
+                    <input id="password" name="password" type="password" 
+                    class="input input-bordered input-primary w-full max-w-xs mb-2" autocomplete="new-password" />
+                    <x-input-error :messages="$errors->updatePassword->get('password')" class="mt-2" />
+                </div>
 
-            @if (session('status') === 'password-updated')
-                <p
-                    x-data="{ show: true }"
-                    x-show="show"
-                    x-transition
-                    x-init="setTimeout(() => show = false, 2000)"
-                    class="text-sm text-gray-600 dark:text-gray-400"
-                >{{ __('更新されました.') }}</p>
-            @endif
-        </div>
-    </form>
+                <div>
+                    <label for="password_confirmation" class="block font-medium text-sm text-gray-700">新しいパスワード（確認）</label>
+                    <input id="password_confirmation" name="password_confirmation" type="password" 
+                    class="input input-bordered input-primary w-full max-w-xs" autocomplete="new-password" /> 
+                    <x-input-error :messages="$errors->updatePassword->get('password_confirmation')" class="mt-2" />
+                </div>
+
+                <div class="flex items-center justify-center gap-4">
+                    <button type="submit" class="bg-purple-300 hover:bg-purple-200 text-white font-bold py-2 px-4 rounded mt-6">
+                        {{ __('更新') }}
+                    </button>
+
+                    @if (session('status') === 'password-updated')
+                        <p x-data="{ show: true }" x-show="show" x-transition x-init="setTimeout(() => show = false, 2000)"
+                            class="text-sm text-gray-600 dark:text-gray-400">{{ __('更新されました.') }}</p>
+                    @endif
+                </div>
+            </div>
+        </form>
+    </div>
 </section>
