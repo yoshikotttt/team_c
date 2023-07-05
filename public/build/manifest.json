@@ -1,0 +1,89 @@
+{
+  "_axios-4a70c6fc.js": {
+    "file": "assets/axios-4a70c6fc.js"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-4b09aa13.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/js/api.js": {
+    "file": "assets/api-e3a19753.js",
+    "imports": [
+      "_axios-4a70c6fc.js"
+    ],
+    "isEntry": true,
+    "src": "resources/js/api.js"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-b815a65e.js",
+    "imports": [
+      "_axios-4a70c6fc.js"
+    ],
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  },
+  "resources/js/detail.js": {
+    "file": "assets/detail-1878d9e1.js",
+    "imports": [
+      "resources/js/api.js",
+      "_axios-4a70c6fc.js"
+    ],
+    "isEntry": true,
+    "src": "resources/js/detail.js"
+  },
+  "resources/js/detail_edit.js": {
+    "file": "assets/detail_edit-fae5205c.js",
+    "imports": [
+      "resources/js/api.js",
+      "_axios-4a70c6fc.js"
+    ],
+    "isEntry": true,
+    "src": "resources/js/detail_edit.js"
+  },
+  "resources/js/edit.js": {
+    "file": "assets/edit-547a951f.js",
+    "imports": [
+      "resources/js/api.js",
+      "_axios-4a70c6fc.js"
+    ],
+    "isEntry": true,
+    "src": "resources/js/edit.js"
+  },
+  "resources/js/mypage.js": {
+    "file": "assets/mypage-d2555f04.js",
+    "imports": [
+      "resources/js/api.js",
+      "_axios-4a70c6fc.js"
+    ],
+    "isEntry": true,
+    "src": "resources/js/mypage.js"
+  },
+  "resources/js/search.js": {
+    "file": "assets/search-9f4e2a30.js",
+    "imports": [
+      "resources/js/api.js",
+      "_axios-4a70c6fc.js"
+    ],
+    "isEntry": true,
+    "src": "resources/js/search.js"
+  },
+  "resources/js/secret.js": {
+    "file": "assets/secret-abf3fe00.js",
+    "imports": [
+      "resources/js/api.js",
+      "_axios-4a70c6fc.js"
+    ],
+    "isEntry": true,
+    "src": "resources/js/secret.js"
+  },
+  "resources/js/timeline.js": {
+    "file": "assets/timeline-db9e34a5.js",
+    "imports": [
+      "resources/js/api.js",
+      "_axios-4a70c6fc.js"
+    ],
+    "isEntry": true,
+    "src": "resources/js/timeline.js"
+  }
+}
