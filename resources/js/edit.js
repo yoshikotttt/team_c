@@ -14,7 +14,7 @@ const tests = isNaN(s);
 // console.log(tests);
 
 let backbtn = "";
-backbtn += `<button onclick="location.href='detail_edit?id=${id}?${s}'" type="button" class="btn bg-blue-200">
+backbtn += `<button onclick="location.href='detail_edit?id=${id}?'" type="button" class="btn bg-blue-200">
     戻る
 </button>`;
 document.querySelector("#backbtn").innerHTML = backbtn;
