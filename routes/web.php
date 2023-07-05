@@ -16,67 +16,67 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/project', function () {
     return view('welcome');
 });
 
-Route::get('/explanation', function () {
+Route::get('/project/explanation', function () {
     return view('explanation');
 })->name('explanation');
 
 //ダッシュボードへのルートは一旦削除
-Route::get('/dashboard', function () {
+Route::get('/project/dashboard', function () {
     return view('/dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 //元のルート   profileが呼ばれると、(functionて書く代わりに)コントローラーのクラスを書いているだけ
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/project/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/project/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/project/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
 /// 新しく作ったルート 
 //after login route
 Route::middleware('auth')->group(function () {
     //timeline(after login)
-    Route::get('/front/timeline',function(){
+    Route::get('/project/front/timeline',function(){
         return view('front.timeline');
     });
     //detail(after login)
-    Route::get('/front/detail',function(){
+    Route::get('/project/front/detail',function(){
         return view('front.detail');
     });
     //logout
-    Route::get('/logout',function(){
+    Route::get('/project/logout',function(){
         return view('front.logout');
     });
 
     //logout
-    Route::get('/front/mypage',function(){
+    Route::get('/project/front/mypage',function(){
         return view('front.mypage');
     });
 
     //secret
-    Route::get('/front/secret',function(){
+    Route::get('/project/front/secret',function(){
         return view('front.secret');
     });
 
     //edit
-    Route::get('/front/edit',function(){
+    Route::get('/project/front/edit',function(){
         return view('front.edit');
     });
 
      //edit
-    Route::get('/front/detail_edit',function(){
+    Route::get('/project/front/detail_edit',function(){
         return view('front.detail_edit');
     });
     //setting
-    Route::get('/front/setting',function(){
+    Route::get('/project/front/setting',function(){
         return view('front.setting');
     });
     //search
-    Route::get('/front/search',function(){
+    Route::get('/project/front/search',function(){
         return view('front.search');
     });
   
@@ -84,12 +84,12 @@ Route::middleware('auth')->group(function () {
 
 //before login route
 //timeline(before login)
-Route::get('/front/timeline',function(){
+Route::get('/project/front/timeline',function(){
     return view('front.timeline');
 });
 
 //detail(before login)
-Route::get('/front/detail',function(){
+Route::get('/project/front/detail',function(){
     return view('front.detail');
 })->name('setting');
 
