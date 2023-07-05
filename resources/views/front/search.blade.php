@@ -42,7 +42,7 @@
         <!-- キーワード検索エリア -->
         <div class="mt-24">
             <div class="text-center">
-                <label for="keyword2" class="block font-medium text-sm text-indigo-900">i性格タイプで検索</label>
+                <label for="keyword2" class="block font-medium text-sm text-indigo-900">性格タイプで検索</label>
                 <select id="keyword2" class="input input-bordered input-primary w-full max-w-xs text-indigo-900" name="keyword2" required autofocus autocomplete="keyword2">
                     <option value="">選択してください</option>
                     <option value="1">INTJ 建築家_分析家</option>
