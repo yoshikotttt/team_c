@@ -29,6 +29,9 @@
                 <a href="/front/timeline" class="flex justify-center py-4">Home</a>
             </li>
             <li>
+                <a href="{{ url('/front/timeline') }}" class="flex justify-center py-4" :class="{ 'active': request()->routeIs('front.timeline') }">test</a>
+            </li>
+            <li>
                 <a href="/front/mypage" class="flex justify-center py-4">mypage</a>
             </li>
             <li>
