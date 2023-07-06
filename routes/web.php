@@ -16,16 +16,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/project', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/project/explanation', function () {
+Route::get('/explanation', function () {
     return view('explanation');
 })->name('explanation');
 
 //ダッシュボードへのルートは一旦削除
-Route::get('/project/dashboard', function () {
+Route::get('/dashboard', function () {
     return view('/dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
