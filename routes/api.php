@@ -43,7 +43,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // Route::apiResource('/front/timeline', RegisteredUserController::class);
 // Route::apiResource('/mypage', EditSentenceController::class);
-Route::prefix("project")->group(function(){
+
     Route::get('users', [UserController::class, 'index']); 
     Route::get('personalities', [PersonalityController::class, 'index']); 
     Route::get('user_sentences', [UserSentenceController::class, 'index']); 
@@ -54,7 +54,7 @@ Route::prefix("project")->group(function(){
     Route::post('search', [userController::class, 'index']); //追加
     //sentence getOne
     Route::get('/sentences/{id}', [SentenceController::class, 'show']); 
-});
+
 
 
 
