@@ -42,6 +42,8 @@
                 <h2 class="mt-2 text-lg font-semibold text-gray-900 dark:text-white">2.他のユーザーの性格を編集する</h2>
 
                 <p class="mt-4 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                    mypageの右上にidがあります。<br>
+                    このidを共有することで友達をhome画面左上の検索ボタンから検索して見つけることができます。<br>
                     友達を見つけたら、自分が思う友達の性格を記入してみよう。<br>
                     <span class="text-red-500">＊編集には秘密の質問をクリアする必要があります</span>
                 </p>
