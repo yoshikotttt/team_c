@@ -26,13 +26,13 @@
         <!-- フッター（ログイン後固定） -->
         <ul class="grid grid-flow-col text-center text-white bg-red-300 p-1 fixed bottom-0 w-full">
             <li>
-                <a href="/front/timeline" class="flex justify-center py-4">Home</a>
+                <a href="/project/front/timeline" class="flex justify-center py-4">Home</a>
             </li>
             <li>
-                <a href="/front/mypage" class="flex justify-center py-4">mypage</a>
+                <a href="/project/front/mypage" class="flex justify-center py-4">mypage</a>
             </li>
             <li>
-                <a href="/profile" class="flex justify-center py-4">設定</a>
+                <a href="/project/profile" class="flex justify-center py-4">設定</a>
             </li>
         </ul>
      <!-- JS, Popper.js, and jQuery -->
