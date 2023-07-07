@@ -12,21 +12,29 @@ export function getAll(endpoint) {
 
 export function getOne(endpoint, id) {
     return axios
-        .get(`${projectName}/api/${endpoint}/${id}`)
+        .get(
+            `https://nakamamoji.sakura.ne.jp/${projectName}/api/${endpoint}/${id}`
+        )
         .then((response) => response.data)
         .catch(handleError);
 }
 
 export function create(endpoint, data) {
     return axios
-        .post(`/${projectName}/api/${endpoint}`, data)
+        .post(
+            `https://nakamamoji.sakura.ne.jp/${projectName}/api/${endpoint}`,
+            data
+        )
         .then((response) => response.data)
         .catch(handleError);
 }
 
 export function update(endpoint, id, data) {
     return axios
-        .put(`/${projectName}/api/${endpoint}/${id}`, data)
+        .put(
+            `https://nakamamoji.sakura.ne.jp/${projectName}/api/${endpoint}/${id}`,
+            data
+        )
         .then((response) => response.data)
         .catch(handleError);
 }
@@ -34,14 +42,18 @@ export function update(endpoint, id, data) {
 //質問の回答の正誤判断のために追加
 export function search(endpoint, params) {
     return axios
-        .get(`/${projectName}/api/${endpoint}`, { params })
+        .get(`https://nakamamoji.sakura.ne.jp/${projectName}/api/${endpoint}`, {
+            params,
+        })
         .then((response) => response.data)
         .catch(handleError);
 }
 
 export function remove(endpoint, id) {
     return axios
-        .delete(`/${projectName}/api/${endpoint}/${id}`)
+        .delete(
+            `https://nakamamoji.sakura.ne.jp/${projectName}/api/${endpoint}/${id}`
+        )
         .then((response) => response.data)
         .catch(handleError);
 }

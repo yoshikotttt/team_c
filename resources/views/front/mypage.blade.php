@@ -60,17 +60,17 @@
 
 
     <!-- フッター（ログイン後固定） -->
-    <ul class="grid grid-flow-col text-center text-white bg-red-300 p-1 fixed bottom-0 w-full">
-        <li>
-            <a href="timeline" class="flex justify-center py-4">Home</a>
-        </li>
-        <li>
-            <a href="mypage" class="flex justify-center py-4">mypage</a>
-        </li>
-        <li>
-            <a href="/profile" class="flex justify-center py-4">設定</a>
-        </li>
-    </ul>
+        <ul class="grid grid-flow-col text-center text-white bg-red-300 p-1 fixed bottom-0 w-full">
+            <li>
+                <a href="/project/front/timeline" class="flex justify-center py-4">Home</a>
+            </li>
+            <li>
+                <a href="/project/front/mypage" class="flex justify-center py-4">mypage</a>
+            </li>
+            <li>
+                <a href="/project/profile" class="flex justify-center py-4">設定</a>
+            </li>
+        </ul>
 
     <!-- JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
