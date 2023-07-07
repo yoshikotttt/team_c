@@ -53,6 +53,7 @@ const element2 = document.getElementById("use_id");
 const user_id = element2.dataset.userId;
 getAll("editSentences").then((editSentences) => {
     let output = ""; // output変数を外側に定義
+    let hasEditComment = false; // 編集コメントがあるかどうかのフラグ
 
     editSentences.forEach((item) => {
         // console.log(item.personalities_id);
@@ -66,8 +67,12 @@ getAll("editSentences").then((editSentences) => {
             output += `<p>${item.content}</p>`;
             output += `</div >`;
             output += `</div>`;
+            hasEditComment = true; // 編集コメントがあることをフラグに記録
         }
     });
+    if (!hasEditComment) {
+        output += `<p>まだ編集コメントはありません</p>`;
+    }
     // output変数の内容をHTMLに挿入
     document.querySelector("#output2").innerHTML = output;
 });
