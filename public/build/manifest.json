@@ -51,7 +51,7 @@
     "src": "resources/js/edit.js"
   },
   "resources/js/mypage.js": {
-    "file": "assets/mypage-e4d090ae.js",
+    "file": "assets/mypage-367da278.js",
     "imports": [
       "resources/js/api.js",
       "_axios-4a70c6fc.js"
