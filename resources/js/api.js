@@ -5,14 +5,14 @@ import { handleError } from "./functions.js";
 const projectName = "project";
 export function getAll(endpoint) {
     return axios
-        .get(`/${projectName}/api/${endpoint}`)
+        .get(`https://nakamamoji.sakura.ne.jp/${projectName}/api/${endpoint}`)
         .then((response) => response.data)
         .catch(handleError);
 }
 
 export function getOne(endpoint, id) {
     return axios
-        .get(`/${projectName}/api/${endpoint}/${id}`)
+        .get(`${projectName}/api/${endpoint}/${id}`)
         .then((response) => response.data)
         .catch(handleError);
 }
