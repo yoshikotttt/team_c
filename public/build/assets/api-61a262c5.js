@@ -1,1 +1,0 @@
-import{a as e}from"./axios-4a70c6fc.js";function n(t){console.error("Error:",t)}const o="project";function i(t){return e.get(`${o}/api/${t}`).then(a=>a.data).catch(n)}function p(t,a){return e.get(`${o}/api/${t}/${a}`).then(r=>r.data).catch(n)}function s(t,a){return e.post(`${o}/api/${t}`,a).then(r=>r.data).catch(n)}export{i as a,s as c,p as g};
